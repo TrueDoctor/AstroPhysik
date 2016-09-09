@@ -16,9 +16,12 @@ namespace ConsoleApplication1
             myport.PortName = "COM5";
             myport.Open();
 
+            string data = "Start";
+
             while (true)
             {
-                string data = myport.ReadLine();
+                myport.Write(data);
+                data = myport.ReadLine();
                 Console.WriteLine(data);
             }
 
