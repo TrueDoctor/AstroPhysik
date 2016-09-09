@@ -7,8 +7,7 @@ Serial.begin(9600);
 // The loop function is called in an endless loop
 void loop()
 {
-    int data = Serial.read(); 
-    if (data != -1)
-      Serial.println(data);
-    delay(500);
+    String data = Serial.readString(); 
+    Serial.println(data);
+    //delay(500);
 }
