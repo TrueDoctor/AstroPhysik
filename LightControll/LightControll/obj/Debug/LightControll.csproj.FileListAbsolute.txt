@@ -14,3 +14,6 @@ C:\Users\Dennis Office\Documents\Dokumente Speichern\Schule\Projekte\Semesterarb
 C:\Users\Dennis Office\Source\Repos\AstroPhysik\Lightcontroll\LightControll\LightControll\bin\Debug\LightControll.exe.config
 C:\Users\Dennis Office\Source\Repos\AstroPhysik\Lightcontroll\LightControll\LightControll\obj\Debug\LightControll.exe
 C:\Users\Dennis Office\Source\Repos\AstroPhysik\Lightcontroll\LightControll\LightControll\obj\Debug\LightControll.pdb
+C:\Users\Dennis Office\Source\Repos\AstroPhysik\Lightcontroll\LightControll\bin\Debug\LightControll.exe.config
+C:\Users\Dennis Office\Source\Repos\AstroPhysik\Lightcontroll\LightControll\obj\Debug\LightControll.exe
+C:\Users\Dennis Office\Source\Repos\AstroPhysik\Lightcontroll\LightControll\obj\Debug\LightControll.pdb

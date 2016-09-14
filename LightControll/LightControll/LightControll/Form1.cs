@@ -28,7 +28,7 @@ namespace LightControll
         private void vScrollBar1_ValueChanged(object sender, EventArgs e)
         {
            
-            //myport.PortName = "COM3"; 
+            //myport.PortName = "COM3";
 
             label1.Text = Bar.Value.ToString();
             //initialisierung

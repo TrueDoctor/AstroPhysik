@@ -13,16 +13,19 @@ namespace ConsoleApplication1
         {
             SerialPort myport = new SerialPort();
             myport.BaudRate = 9600;
-            myport.PortName = "COM5";
+            myport.PortName = "COM9";
             myport.Open();
 
-            string data = "Start";
+            myport.Write("1,0");
 
-            while (true)
+                       
+            for(int i= 0;i<=2550;i++) 
             {
-                myport.Write(data);
-                data = myport.ReadLine();
-                Console.WriteLine(data);
+                myport.WriteLine("1,"+i.ToString());
+                
+                string data = myport.ReadLine();
+                Console.WriteLine(i);
+                
             }
 
         }
