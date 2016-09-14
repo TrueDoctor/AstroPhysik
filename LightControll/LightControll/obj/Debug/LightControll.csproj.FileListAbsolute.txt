@@ -1,0 +1,16 @@
+C:\Users\Dennis Office\Documents\Dokumente Speichern\Schule\Projekte\Semesterarbeit\Lightcontroll\LightControll\LightControll\bin\Debug\LightControll.exe.config
+C:\Users\Dennis Office\Documents\Dokumente Speichern\Schule\Projekte\Semesterarbeit\Lightcontroll\LightControll\LightControll\obj\Debug\LightControll.csprojResolveAssemblyReference.cache
+C:\Users\Dennis Office\Documents\Dokumente Speichern\Schule\Projekte\Semesterarbeit\Lightcontroll\LightControll\LightControll\obj\Debug\LightControll.Properties.Resources.resources
+C:\Users\Dennis Office\Documents\Dokumente Speichern\Schule\Projekte\Semesterarbeit\Lightcontroll\LightControll\LightControll\obj\Debug\LightControll.csproj.GenerateResource.Cache
+C:\Users\Dennis Office\Documents\Dokumente Speichern\Schule\Projekte\Semesterarbeit\Lightcontroll\LightControll\LightControll\bin\Debug\LightControll.exe
+C:\Users\Dennis Office\Documents\Dokumente Speichern\Schule\Projekte\Semesterarbeit\Lightcontroll\LightControll\LightControll\bin\Debug\LightControll.pdb
+C:\Users\Dennis Office\Documents\Dokumente Speichern\Schule\Projekte\Semesterarbeit\Lightcontroll\LightControll\LightControll\obj\Debug\LightControll.exe
+C:\Users\Dennis Office\Documents\Dokumente Speichern\Schule\Projekte\Semesterarbeit\Lightcontroll\LightControll\LightControll\obj\Debug\LightControll.pdb
+C:\Users\Dennis Office\Documents\Dokumente Speichern\Schule\Projekte\Semesterarbeit\Lightcontroll\LightControll\LightControll\obj\Debug\LightControll.Form1.resources
+C:\Users\Dennis Office\Documents\Dokumente Speichern\Schule\Projekte\Semesterarbeit\Lightcontroll\LightControll\LightControll\bin\Debug\LightControll.exe.manifest
+C:\Users\Dennis Office\Documents\Dokumente Speichern\Schule\Projekte\Semesterarbeit\Lightcontroll\LightControll\LightControll\bin\Debug\LightControll.application
+C:\Users\Dennis Office\Documents\Dokumente Speichern\Schule\Projekte\Semesterarbeit\Lightcontroll\LightControll\LightControll\obj\Debug\LightControll.exe.manifest
+C:\Users\Dennis Office\Documents\Dokumente Speichern\Schule\Projekte\Semesterarbeit\Lightcontroll\LightControll\LightControll\obj\Debug\LightControll.application
+C:\Users\Dennis Office\Source\Repos\AstroPhysik\Lightcontroll\LightControll\LightControll\bin\Debug\LightControll.exe.config
+C:\Users\Dennis Office\Source\Repos\AstroPhysik\Lightcontroll\LightControll\LightControll\obj\Debug\LightControll.exe
+C:\Users\Dennis Office\Source\Repos\AstroPhysik\Lightcontroll\LightControll\LightControll\obj\Debug\LightControll.pdb
