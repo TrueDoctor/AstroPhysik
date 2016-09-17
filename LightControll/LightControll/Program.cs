@@ -60,13 +60,6 @@ namespace LightControll
 
        
 
-        public static void Write(byte i, byte n)
-        {
-            if (myport.ReadBufferSize > 0) {
-                byte[] send = new byte[2] { n, i };
-
-                myport.Write(send, 0, 2);
-                myport.DiscardInBuffer(); }
-        }
+        
     }
 }

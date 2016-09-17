@@ -33,12 +33,19 @@ namespace LightControll
             label1.Text = Bar.Value.ToString();
             //initialisierung
 
+            byte i = (byte)Bar.Value;
+            send(id: 1,value: i);
+
+           
+        }
+
+        public void send(byte id, byte value)
+        {
             if (myport.ReadBufferSize > 0)
             {
-                byte i = (byte) Bar.Value; 
-                byte[] send = new byte[2] { 1,i };
+                byte[] sendData = new byte[2] { id, value };
 
-                myport.Write(send, 0, 2);
+                myport.Write(sendData, 0, 2);
                 myport.DiscardInBuffer();
             }
         }
