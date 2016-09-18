@@ -48,12 +48,12 @@ namespace LightControll
                 {
                 if (setupPorts(ports[i]) == true)
                 {
-
-                    if (myport.ReadBufferSize > 0)
-                    {
-                        if (myport.ReadChar() == 'B')
+                    for (byte timeout=42;timeout>0;timeout-- )
+                        if (myport.ReadBufferSize > 0)
                         {
-                            return;
+                              if (myport.ReadChar() == 'B')
+                        {
+                              return;
                         }
                     }
                     myport.Close();
