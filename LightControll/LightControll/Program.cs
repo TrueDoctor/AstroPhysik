@@ -24,7 +24,7 @@ namespace LightControll
             Application.Run(new Form1());
 
             
-            setup("COM3");
+            //setup("COM3");
             
 
 

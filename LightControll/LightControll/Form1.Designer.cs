@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.Bar = new System.Windows.Forms.VScrollBar();
-            this.myport = new System.IO.Ports.SerialPort(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -43,11 +41,6 @@
             this.Bar.TabIndex = 0;
             this.Bar.Value = 10;
             this.Bar.ValueChanged += new System.EventHandler(this.vScrollBar1_ValueChanged);
-            // 
-            // myport
-            // 
-            this.myport.PortName = "COM3";
-            this.myport.RtsEnable = true;
             // 
             // label1
             // 
@@ -75,7 +68,6 @@
         #endregion
 
         private System.Windows.Forms.VScrollBar Bar;
-        private System.IO.Ports.SerialPort myport;
         private System.Windows.Forms.Label label1;
     }
 }
