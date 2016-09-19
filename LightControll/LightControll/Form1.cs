@@ -29,10 +29,10 @@ namespace LightControl
            
             
 
-            label1.Text = Bar.Value.ToString();
+            label1.Text = Bar1.Value.ToString();
        
 
-            byte i = (byte)Bar.Value;
+            byte i = (byte)Bar1.Value;
             try
             {
                 send(id: 1, value: i);
@@ -68,7 +68,18 @@ namespace LightControl
 
         }
 
+        public  byte[] brightnessGet()
+        {
+            byte[] brightness = new byte[2];
+            brightness[0] = (byte) Bar1.Value;
+            brightness[1] = (byte)Bar2.Value;
+            brightness[2] = (byte)Bar3.Value;
+            brightness[3] = (byte)Bar4.Value;
+            brightness[4] = (byte)Bar5.Value;
+            brightness[5] = (byte)Bar6.Value;
+            return brightness;
 
+        }
 
 
 
