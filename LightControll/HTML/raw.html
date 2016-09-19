@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Auswertung der Helligkeiten</title>
+    <style>
+      table, td, th { border: 1px solid black}
+    </style>
+    
+    
+    <script scr="@0"></script>
+    <script scr="@1"></script>
+    <script scr="@2"></script>
+    <link rel="stylesheet" href="@3" type="text/css" media="all" />
+    <script scr="@4"></script>
+    
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>LED</th>
+        <th>Helligkeit</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>@5</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>@6</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>@7</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>@8</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>@9</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>@A</td>
+      </tr>
+    </table>
+    
+    <script>
+      var chart = AmCharts.makeChart("chartdiv", {
+        "type": "serial",
+        "theme": "light",
+        "marginTop": 80,
+        "marginRight": 80,
+        "dataProvider": [{
+          "LED":6
+          "Helligkeit":@A;
+        },{
+          "LED":5
+          "Helligkeit":@9;
+        },{
+          "LED":4
+          "Helligkeit":@8;
+        },{
+          "LED":3
+          "Helligkeit":@7;
+        },{
+          "LED":2
+          "Helligkeit":@6;
+        },{
+          "LED":1
+          "Helligkeit":@5;
+        }],
+        "valueAxes": [{
+          "axisAlpha": 0,
+          "position": "left"
+        }],
+        "graphs": [{
+          "id":"g1",
+          "balloonText": "[[category]]<br><b><span style='font-size:14px;'>[[Helligkeit]]</span></b>",
+          "bullet": "round",
+          "bulletSize": 8,
+          "lineColor": "#d1655d",
+          "lineThickness": 2,
+          "negativeLineColor": "#637bb6",
+          "type": "smoothedLine",
+          "valueField": "Helligkeit"
+        }],
+        "categoryField": "LED",
+        "categoryAxis": {
+          "minPeriod": "1",
+          "minorGridAlpha": 0.1,
+          "minorGridEnabled": true
+        },
+        "export": {
+          "enabled": true
+        }
+      });
+      chart.addListener("rendered", zoomChart);
+      if(chart.zoomChart){
+	    chart.zoomChart();
+      }
+
+      function zoomChart(){
+        chart.zoomToIndexes(Math.round(0), Math.round(chart.dataProvider.length));
+      }
+    </script>
+    
+    <div id="chartdiv"></div>
+  </body>
+</html>
