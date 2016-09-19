@@ -51,7 +51,8 @@ namespace LightControl
 
             MessageBox.Show("Keine Verbindung zur LightBox", "Lightcontrol",
             MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            searchPorts();
+            //searchPorts();
+
 
         }
 
