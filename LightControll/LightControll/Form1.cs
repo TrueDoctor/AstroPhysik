@@ -21,7 +21,7 @@ namespace LightControl
         public Form1()
         {
             InitializeComponent();
-            searchPorts();
+            //searchPorts();
         }
 
         
@@ -141,7 +141,8 @@ namespace LightControl
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
-
+            byte[] ab = { 123, 123 };
+            ReturnLines.line(ab);
         }
 
        
