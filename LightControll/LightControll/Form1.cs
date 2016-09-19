@@ -15,7 +15,7 @@ namespace LightControl
     public partial class Form1 : Form
     {
 
-        static SerialPort myport = new SerialPort();
+        public static SerialPort myport = new SerialPort();
         static int num = 0;
 
         public Form1()
@@ -44,9 +44,9 @@ namespace LightControl
 
          public static void searchPorts() // port Suche
         {
-           
-                string[] ports = SerialPort.GetPortNames();
-                for (int i = 0; i < ports.Length; i++)
+
+            string[] ports = SerialPort.GetPortNames();
+            for (int i = 0; i < ports.Length; i++)
                 {
                 if (setupPorts(ports[i]) == true)
                 {
@@ -80,13 +80,11 @@ namespace LightControl
 
 
 
-        private static bool setupPorts(string name) //PortSetup
+         private static bool setupPorts(string name) //PortSetup
         {
 
             myport.BaudRate = 20000;
-            myport.PortName = name;
-                myport.DiscardOutBuffer();
-                return true;
+            myport.PortName = name;            
             myport.RtsEnable = true;
             myport.DtrEnable = true;
             try
@@ -94,10 +92,12 @@ namespace LightControl
                 myport.Open();
 
                 //initialisierung
+
                 myport.DiscardNull = true;
                 myport.WriteTimeout = 100;
 
                 myport.DiscardInBuffer();
+                return true;
             }
             catch { return false; }
         }
