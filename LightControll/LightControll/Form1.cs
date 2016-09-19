@@ -7,39 +7,100 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO.Ports;
 
 namespace LightControll
 {
     public partial class Form1 : Form
     {
+
+        static SerialPort myport = new SerialPort();
+
         public Form1()
         {
             InitializeComponent();
-            myport.Open();
-            myport.DiscardNull = true;
-            myport.WriteTimeout = 100;
-
-            myport.DiscardInBuffer();
-            myport.DiscardOutBuffer();
-            myport.BaudRate = 20000;
-
+            searchPorts();
         }
 
         private void vScrollBar1_ValueChanged(object sender, EventArgs e)
         {
            
-            //myport.PortName = "COM3"; 
+            
 
             label1.Text = Bar.Value.ToString();
-            //initialisierung
+       
 
             byte i = (byte)Bar.Value;
-            send(id: 1,value: i);
+            try
+            {
+                send(id: 1, value: i);
+            }
+            catch { searchPorts(); }
 
            
         }
 
-        public void send(byte id, byte value)
+         public static void searchPorts() // port Suche
+        {
+           
+                string[] ports = SerialPort.GetPortNames();
+                for (int i = 0; i < ports.Length; i++)
+                {
+                if (setupPorts(ports[i]) == true)
+                {
+
+                    if (myport.ReadBufferSize > 0)
+                    {
+                        if (myport.ReadChar() == 'B')
+                        {
+                            return;
+                        }
+                    }
+                    myport.Close();
+                }
+            }
+
+            MessageBox.Show("Keine Verbindung zur LightBox", "Lightcontrol",
+            MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+            searchPorts();
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private static bool setupPorts(string name) //PortSetup
+        {
+
+            myport.BaudRate = 20000;
+            myport.PortName = name;
+            myport.RtsEnable = true;
+            myport.DtrEnable = true;
+            try
+            {
+                myport.Open();
+
+                //initialisierung
+                myport.DiscardNull = true;
+                myport.WriteTimeout = 100;
+
+                myport.DiscardInBuffer();
+                myport.DiscardOutBuffer();
+                return true;
+            }
+            catch { return false; }
+        }
+
+        public void send(byte id, byte value) //Sende Funktion
         {
             if (myport.ReadBufferSize > 0)
             {

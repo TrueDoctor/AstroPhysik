@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LightControll.exe" size="9680">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LightControll.exe" size="10192">
       <assemblyIdentity name="LightControll" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3JROB6SMjLlEKyMivZuUepGWg9lo/3cqCssZDrhlQiY=</dsig:DigestValue>
+        <dsig:DigestValue>rgrXMtwRIY/eW54cjpg2F/FyUEMhLUfw2RkPMy/0APU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
