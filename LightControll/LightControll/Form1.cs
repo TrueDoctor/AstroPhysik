@@ -24,36 +24,30 @@ namespace LightControll
 
         private void vScrollBar1_ValueChanged(object sender, EventArgs e)
         {
-           
-            
-
             label1.Text = Bar.Value.ToString();
        
-
             byte i = (byte)Bar.Value;
             try
             {
                 send(id: 1, value: i);
             }
-            catch { searchPorts(); }
-
-           
+            catch { searchPorts(); }         
         }
 
+
          public static void searchPorts() // port Suche
-        {
-           
+        {           
                 string[] ports = SerialPort.GetPortNames();
                 for (int i = 0; i < ports.Length; i++)
                 {
                 if (setupPorts(ports[i]) == true)
                 {
-
-                    if (myport.ReadBufferSize > 0)
-                    {
-                        if (myport.ReadChar() == 'B')
+                    for (byte timeout=42;timeout>0;timeout-- )
+                        if (myport.ReadBufferSize > 0)
                         {
-                            return;
+                              if (myport.ReadChar() == 'B')
+                        {
+                              return;
                         }
                     }
                     myport.Close();
@@ -65,13 +59,6 @@ namespace LightControll
             searchPorts();
 
         }
-
-
-
-
-
-
-
 
 
 

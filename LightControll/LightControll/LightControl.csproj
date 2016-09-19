@@ -7,8 +7,8 @@
     <ProjectGuid>{EBB79D2D-E623-442D-9FD9-DF86CEEF0A97}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LightControll</RootNamespace>
-    <AssemblyName>LightControll</AssemblyName>
+    <RootNamespace>LightControl</RootNamespace>
+    <AssemblyName>LightControl</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -94,6 +94,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="LightControll_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
