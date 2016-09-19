@@ -122,8 +122,19 @@ namespace LightControl
             sFD.Title = "Ergebnisse speichern unter:";
             if (sFD.FileName != "")
             {
-                System.IO.File.WriteAllLines(sFD.FileName, ReturnLines.line(brightness));
+                try
+                {
+                    System.IO.File.WriteAllLines(sFD.FileName, ReturnLines.line(brightness));
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Ausnahme trat auf: \n" + e, "Fehler" , MessageBoxButtons.OK);
+                }
             }
+            else
+            {
+                MessageBox.Show("Es wurde kein Dateiname eingegeben.", "Fehlender Dateiname", MessageBoxButtons.OK);
+            };
 
             return true;
         }
