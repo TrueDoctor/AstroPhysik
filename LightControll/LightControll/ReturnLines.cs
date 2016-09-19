@@ -15,7 +15,8 @@ namespace LightControl
             string dir = Directory.GetCurrentDirectory();
             string codeRaw = System.IO.File.ReadAllText(Path.Combine(dir, "raw.html"));
 
-            string[] codeRawArray = codeRaw.Split('\n');
+            string[] codeRawArray = codeRaw.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            MessageBox.Show(codeRawArray[1]);
 
             for (int i = 0; i < codeRawArray.Length; i++)
             {
