@@ -38,9 +38,9 @@ namespace LightControll
          public static void searchPorts() // port Suche
         {           
                 string[] ports = SerialPort.GetPortNames();
-                for (int i = 0; i < ports.Length; i++)
+                foreach (string port in ports)
                 {
-                if (setupPorts(ports[i]) == true)
+                if (setupPorts(port) == true)
                 {
                     for (byte timeout=42;timeout>0;timeout-- )
                         if (myport.ReadBufferSize > 0)
