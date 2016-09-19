@@ -119,6 +119,7 @@ namespace LightControl
             SaveFileDialog sFD = new SaveFileDialog();
             sFD.Filter = "HTML Datei|*.html";
             sFD.Title = "Ergebnisse speichern unter:";
+            sFD.ShowDialog();
             if (sFD.FileName != "")
             {
                 try
