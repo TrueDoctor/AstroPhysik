@@ -120,6 +120,7 @@ namespace LightControl
             SaveFileDialog sFD = new SaveFileDialog();
             sFD.Filter = "HTML Datei|*.html";
             sFD.Title = "Ergebnisse speichern unter:";
+            sFD.ShowDialog();
             if (sFD.FileName != "")
             {
                 try
@@ -141,8 +142,28 @@ namespace LightControl
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
-
+            if (!checkInternet())
+            {
+                MessageBox.Show("Konnte keine Verbindung aufbauen, Auswertung enthält eventuell keinen Graphen.", "Kein Verbindung", MessageBoxButtons.OK);
+            }
         }
 
+        public static bool checkInternet()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                {
+                    using (var stream = client.OpenRead("https://www.amcharts.com/lib/3/amcharts.js"))
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
