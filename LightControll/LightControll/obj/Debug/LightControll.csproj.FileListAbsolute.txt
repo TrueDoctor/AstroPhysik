@@ -30,3 +30,7 @@ C:\Users\Dennis Office\Source\Repos\AstroPhysik\Lightcontroll\LightControll\obj\
 C:\Users\Timon\Source\Repos\AstroPhysik\LightControll\LightControll\bin\Debug\LightControll.exe.config
 C:\Users\Timon\Source\Repos\AstroPhysik\LightControll\LightControll\obj\Debug\LightControll.exe
 C:\Users\Timon\Source\Repos\AstroPhysik\LightControll\LightControll\obj\Debug\LightControll.pdb
+C:\Users\Timon\Source\Repos\AstroPhysik\LightControll\LightControll\obj\Debug\LightControll.csprojResolveAssemblyReference.cache
+C:\Users\Timon\Source\Repos\AstroPhysik\LightControll\LightControll\obj\Debug\LightControll.Form1.resources
+C:\Users\Timon\Source\Repos\AstroPhysik\LightControll\LightControll\obj\Debug\LightControll.Properties.Resources.resources
+C:\Users\Timon\Source\Repos\AstroPhysik\LightControll\LightControll\obj\Debug\LightControll.csproj.GenerateResource.Cache
