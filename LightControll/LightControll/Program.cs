@@ -59,14 +59,5 @@ namespace LightControl
             myport.DiscardOutBuffer();
         }
 
-        public bool createHTML(byte[] brightness)
-        {
-            System.IO.File.WriteAllLines(@"", "");
-
-            return true;
-        }
-
-
-
     }
 }
