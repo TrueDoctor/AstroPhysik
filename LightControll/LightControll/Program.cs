@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 
-namespace LightControll
+namespace LightControl
 {
     static class Program
     {
+
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>
@@ -58,8 +59,5 @@ namespace LightControll
             myport.DiscardOutBuffer();
         }
 
-       
-
-        
     }
 }
