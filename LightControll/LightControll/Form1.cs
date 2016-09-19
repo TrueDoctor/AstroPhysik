@@ -24,23 +24,7 @@ namespace LightControl
             searchPorts();
         }
 
-        private void vScrollBar1_ValueChanged(object sender, EventArgs e)
-        {
-           
-            
-
-            label1.Text = Bar.Value.ToString();
-       
-
-            byte i = (byte)Bar.Value;
-            try
-            {
-                send(id: 1, value: i);
-            }
-            catch { searchPorts(); }
-
-           
-        }
+        
 
          public static void searchPorts() // port Suche
         {
@@ -69,6 +53,21 @@ namespace LightControl
         }
 
 
+
+
+
+        private  byte[] brightnessGet()
+        {
+            byte[] brightness = new byte[6];
+            brightness[0] = (byte) Bar1.Value;
+            brightness[1] = (byte)Bar2.Value;
+            brightness[2] = (byte)Bar3.Value;
+            brightness[3] = (byte)Bar4.Value;
+            brightness[4] = (byte)Bar5.Value;
+            brightness[5] = (byte)Bar6.Value;
+            return brightness;
+
+        }
 
 
 
@@ -120,7 +119,6 @@ namespace LightControl
             SaveFileDialog sFD = new SaveFileDialog();
             sFD.Filter = "HTML Datei|*.html";
             sFD.Title = "Ergebnisse speichern unter:";
-            sFD.ShowDialog();
             if (sFD.FileName != "")
             {
                 try
@@ -142,28 +140,68 @@ namespace LightControl
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
-            if (!checkInternet())
-            {
-                MessageBox.Show("Konnte keine Verbindung aufbauen, Auswertung enthält eventuell keinen Graphen.", "Kein Verbindung", MessageBoxButtons.OK);
-            }
+
         }
 
-        public static bool checkInternet()
+       
+        private void Bar1_Scroll(object sender, ScrollEventArgs e)
         {
+            byte i = (byte)Bar1.Value;
             try
             {
-                using (var client = new WebClient())
-                {
-                    using (var stream = client.OpenRead("https://www.amcharts.com/lib/3/amcharts.js"))
-                    {
-                        return true;
-                    }
-                }
+                send(id: 1, value: i);
             }
-            catch
+            catch { searchPorts(); }
+        }
+        private void Bar2_Scroll(object sender, ScrollEventArgs e)
+        {
+            byte i = (byte)Bar2.Value;
+            try
             {
-                return false;
+                send(id: 2, value: i);
             }
+            catch { searchPorts(); }
+        }
+        private void Bar3_Scroll(object sender, ScrollEventArgs e)
+        {
+            byte i = (byte)Bar3.Value;
+            try
+            {
+                send(id: 3, value: i);
+            }
+            catch { searchPorts(); }
+        }
+        private void Bar4_Scroll(object sender, ScrollEventArgs e)
+        {
+            byte i = (byte)Bar4.Value;
+            try
+            {
+                send(id: 4, value: i);
+            }
+            catch { searchPorts(); }
+        }
+        private void Bar5_Scroll(object sender, ScrollEventArgs e)
+        {
+            byte i = (byte)Bar5.Value;
+            try
+            {
+                send(id: 5, value: i);
+            }
+            catch { searchPorts(); }
+        }
+        private void Bar6_Scroll(object sender, ScrollEventArgs e)
+        {
+            byte i = (byte)Bar6.Value;
+            try
+            {
+                send(id: 6, value: i);
+            }
+            catch { searchPorts(); }
+        }
+
+        private void Button_Click(object sender, EventArgs e)
+        {
+            createHTML(brightnessGet());
         }
     }
 }

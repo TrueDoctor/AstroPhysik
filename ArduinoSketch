@@ -1,4 +1,4 @@
-byte led [7] = {2, 11, 10, 9, 6, 5, 3};
+byte led [7] = {2, 3, 5, 6, 9, 10, 11};  
 byte id = 0;
 byte brightness = 0;
 void setup() {
