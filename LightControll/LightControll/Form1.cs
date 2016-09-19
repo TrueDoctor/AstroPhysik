@@ -24,23 +24,7 @@ namespace LightControl
             searchPorts();
         }
 
-        private void vScrollBar1_ValueChanged(object sender, EventArgs e)
-        {
-           
-            
-
-            label1.Text = Bar1.Value.ToString();
-       
-
-            byte i = (byte)Bar1.Value;
-            try
-            {
-                send(id: 1, value: i);
-            }
-            catch { searchPorts(); }
-
-           
-        }
+        
 
          public static void searchPorts() // port Suche
         {
@@ -155,5 +139,60 @@ namespace LightControl
 
         }
 
+       
+        private void Bar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            byte i = (byte)Bar1.Value;
+            try
+            {
+                send(id: 1, value: i);
+            }
+            catch { searchPorts(); }
+        }
+        private void Bar2_Scroll(object sender, ScrollEventArgs e)
+        {
+            byte i = (byte)Bar2.Value;
+            try
+            {
+                send(id: 2, value: i);
+            }
+            catch { searchPorts(); }
+        }
+        private void Bar3_Scroll(object sender, ScrollEventArgs e)
+        {
+            byte i = (byte)Bar3.Value;
+            try
+            {
+                send(id: 3, value: i);
+            }
+            catch { searchPorts(); }
+        }
+        private void Bar4_Scroll(object sender, ScrollEventArgs e)
+        {
+            byte i = (byte)Bar4.Value;
+            try
+            {
+                send(id: 4, value: i);
+            }
+            catch { searchPorts(); }
+        }
+        private void Bar5_Scroll(object sender, ScrollEventArgs e)
+        {
+            byte i = (byte)Bar5.Value;
+            try
+            {
+                send(id: 5, value: i);
+            }
+            catch { searchPorts(); }
+        }
+        private void Bar6_Scroll(object sender, ScrollEventArgs e)
+        {
+            byte i = (byte)Bar6.Value;
+            try
+            {
+                send(id: 6, value: i);
+            }
+            catch { searchPorts(); }
+        }
     }
 }

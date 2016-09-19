@@ -61,8 +61,7 @@
             this.Bar1.Name = "Bar1";
             this.Bar1.Size = new System.Drawing.Size(30, 30);
             this.Bar1.TabIndex = 0;
-            this.Bar1.Value = 10;
-            this.Bar1.ValueChanged += new System.EventHandler(this.vScrollBar1_ValueChanged);
+            this.Bar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Bar1_Scroll);
             // 
             // label1
             // 
@@ -89,7 +88,7 @@
             this.Bar4.Name = "Bar4";
             this.Bar4.Size = new System.Drawing.Size(30, 30);
             this.Bar4.TabIndex = 0;
-            this.Bar4.Value = 10;
+            this.Bar4.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Bar4_Scroll);
             // 
             // panel2
             // 
@@ -107,7 +106,7 @@
             this.Bar3.Name = "Bar3";
             this.Bar3.Size = new System.Drawing.Size(30, 30);
             this.Bar3.TabIndex = 0;
-            this.Bar3.Value = 10;
+            this.Bar3.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Bar3_Scroll);
             // 
             // Bar2
             // 
@@ -116,7 +115,7 @@
             this.Bar2.Name = "Bar2";
             this.Bar2.Size = new System.Drawing.Size(30, 30);
             this.Bar2.TabIndex = 0;
-            this.Bar2.Value = 10;
+            this.Bar2.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Bar2_Scroll);
             // 
             // label2
             // 
@@ -143,7 +142,7 @@
             this.Bar5.Name = "Bar5";
             this.Bar5.Size = new System.Drawing.Size(30, 30);
             this.Bar5.TabIndex = 0;
-            this.Bar5.Value = 10;
+            this.Bar5.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Bar5_Scroll);
             // 
             // label3
             // 
@@ -197,7 +196,7 @@
             this.Bar6.Name = "Bar6";
             this.Bar6.Size = new System.Drawing.Size(30, 30);
             this.Bar6.TabIndex = 9;
-            this.Bar6.Value = 10;
+            this.Bar6.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Bar6_Scroll);
             // 
             // label6
             // 
