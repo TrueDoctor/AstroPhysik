@@ -30,36 +30,14 @@ namespace LightControll
 
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private static void setup(string name)
-        {
-            
-            myport.BaudRate = 20000;
-            myport.PortName = name;
-            myport.Open();
-
-            //initialisierung
-            myport.DiscardNull = true;
-            myport.WriteTimeout = 100;
-
-            myport.DiscardInBuffer();
-            myport.DiscardOutBuffer();
-        }
-
        
 
         
+    }
+
+
+    static class html
+    {
+
     }
 }
