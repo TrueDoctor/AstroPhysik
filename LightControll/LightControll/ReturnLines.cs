@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LightControl
 {
-    class ReturnLines
+    public static class ReturnLines
     {
         public static string[] line(byte[] brightness)
         {
