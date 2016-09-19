@@ -31,17 +31,17 @@
             this.Bar = new System.Windows.Forms.VScrollBar();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.vScrollBar3 = new System.Windows.Forms.VScrollBar();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
+            this.vScrollBar4 = new System.Windows.Forms.VScrollBar();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.vScrollBar3 = new System.Windows.Forms.VScrollBar();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.vScrollBar4 = new System.Windows.Forms.VScrollBar();
             this.label5 = new System.Windows.Forms.Label();
             this.vScrollBar5 = new System.Windows.Forms.VScrollBar();
             this.label6 = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             this.Bar.Size = new System.Drawing.Size(30, 30);
             this.Bar.TabIndex = 0;
             this.Bar.Value = 10;
-            this.Bar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Bar_Scroll);
+            
             this.Bar.ValueChanged += new System.EventHandler(this.vScrollBar1_ValueChanged);
             // 
             // label1
@@ -83,6 +83,15 @@
             this.panel1.Size = new System.Drawing.Size(32, 32);
             this.panel1.TabIndex = 2;
             // 
+            // vScrollBar3
+            // 
+            this.vScrollBar3.Location = new System.Drawing.Point(0, 1);
+            this.vScrollBar3.Maximum = 264;
+            this.vScrollBar3.Name = "vScrollBar3";
+            this.vScrollBar3.Size = new System.Drawing.Size(30, 30);
+            this.vScrollBar3.TabIndex = 0;
+            this.vScrollBar3.Value = 10;
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -91,6 +100,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(32, 32);
             this.panel2.TabIndex = 4;
+            // 
+            // vScrollBar2
+            // 
+            this.vScrollBar2.Location = new System.Drawing.Point(0, 0);
+            this.vScrollBar2.Maximum = 264;
+            this.vScrollBar2.Name = "vScrollBar2";
+            this.vScrollBar2.Size = new System.Drawing.Size(30, 30);
+            this.vScrollBar2.TabIndex = 0;
+            this.vScrollBar2.Value = 10;
             // 
             // vScrollBar1
             // 
@@ -109,7 +127,7 @@
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "LED 2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+         
             // 
             // panel3
             // 
@@ -120,14 +138,14 @@
             this.panel3.Size = new System.Drawing.Size(32, 32);
             this.panel3.TabIndex = 6;
             // 
-            // vScrollBar2
+            // vScrollBar4
             // 
-            this.vScrollBar2.Location = new System.Drawing.Point(0, 0);
-            this.vScrollBar2.Maximum = 264;
-            this.vScrollBar2.Name = "vScrollBar2";
-            this.vScrollBar2.Size = new System.Drawing.Size(30, 30);
-            this.vScrollBar2.TabIndex = 0;
-            this.vScrollBar2.Value = 10;
+            this.vScrollBar4.Location = new System.Drawing.Point(0, -1);
+            this.vScrollBar4.Maximum = 264;
+            this.vScrollBar4.Name = "vScrollBar4";
+            this.vScrollBar4.Size = new System.Drawing.Size(30, 30);
+            this.vScrollBar4.TabIndex = 0;
+            this.vScrollBar4.Value = 10;
             // 
             // label3
             // 
@@ -147,15 +165,6 @@
             this.panel4.Size = new System.Drawing.Size(32, 32);
             this.panel4.TabIndex = 8;
             // 
-            // vScrollBar3
-            // 
-            this.vScrollBar3.Location = new System.Drawing.Point(0, 1);
-            this.vScrollBar3.Maximum = 264;
-            this.vScrollBar3.Name = "vScrollBar3";
-            this.vScrollBar3.Size = new System.Drawing.Size(30, 30);
-            this.vScrollBar3.TabIndex = 0;
-            this.vScrollBar3.Value = 10;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -174,15 +183,6 @@
             this.panel5.Size = new System.Drawing.Size(32, 32);
             this.panel5.TabIndex = 4;
             // 
-            // vScrollBar4
-            // 
-            this.vScrollBar4.Location = new System.Drawing.Point(0, -1);
-            this.vScrollBar4.Maximum = 264;
-            this.vScrollBar4.Name = "vScrollBar4";
-            this.vScrollBar4.Size = new System.Drawing.Size(30, 30);
-            this.vScrollBar4.TabIndex = 0;
-            this.vScrollBar4.Value = 10;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -200,7 +200,7 @@
             this.vScrollBar5.Size = new System.Drawing.Size(30, 30);
             this.vScrollBar5.TabIndex = 9;
             this.vScrollBar5.Value = 10;
-            this.vScrollBar5.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar5_Scroll);
+           
             // 
             // label6
             // 
@@ -210,7 +210,7 @@
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "LED 6";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+           
             // 
             // panel6
             // 
@@ -220,7 +220,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(32, 32);
             this.panel6.TabIndex = 11;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+           
             // 
             // Form1
             // 
