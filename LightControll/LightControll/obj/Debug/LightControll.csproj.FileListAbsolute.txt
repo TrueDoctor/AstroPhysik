@@ -27,3 +27,6 @@ C:\Users\Dennis Office\Source\Repos\AstroPhysik\Lightcontroll\LightControll\obj\
 C:\Users\Dennis Office\Source\Repos\AstroPhysik\Lightcontroll\LightControll\obj\Debug\LightControll.csproj.GenerateResource.Cache
 C:\Users\Dennis Office\Source\Repos\AstroPhysik\Lightcontroll\LightControll\obj\Debug\LightControll.exe.manifest
 C:\Users\Dennis Office\Source\Repos\AstroPhysik\Lightcontroll\LightControll\obj\Debug\LightControll.application
+C:\Users\Timon\Source\Repos\AstroPhysik\LightControll\LightControll\bin\Debug\LightControll.exe.config
+C:\Users\Timon\Source\Repos\AstroPhysik\LightControll\LightControll\obj\Debug\LightControll.exe
+C:\Users\Timon\Source\Repos\AstroPhysik\LightControll\LightControll\obj\Debug\LightControll.pdb
