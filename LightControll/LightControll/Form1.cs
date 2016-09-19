@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO.Ports;
+using System.IO;
 
 namespace LightControll
 {
@@ -15,6 +15,7 @@ namespace LightControll
     {
 
         static SerialPort myport = new SerialPort();
+        static int num = 0;
 
         public Form1()
         {
@@ -74,7 +75,7 @@ namespace LightControll
 
 
 
-
+         
 
 
 
@@ -83,6 +84,8 @@ namespace LightControll
 
             myport.BaudRate = 20000;
             myport.PortName = name;
+                myport.DiscardOutBuffer();
+                return true;
             myport.RtsEnable = true;
             myport.DtrEnable = true;
             try
@@ -94,8 +97,6 @@ namespace LightControll
                 myport.WriteTimeout = 100;
 
                 myport.DiscardInBuffer();
-                myport.DiscardOutBuffer();
-                return true;
             }
             catch { return false; }
         }
@@ -109,6 +110,15 @@ namespace LightControll
                 myport.Write(sendData, 0, 2);
                 myport.DiscardInBuffer();
             }
+        }
+
+
+
+        public bool createHTML(byte[] brightness)
+        {
+            System.IO.File.WriteAllLines(@"", "");
+
+            return true;
         }
     }
 }
