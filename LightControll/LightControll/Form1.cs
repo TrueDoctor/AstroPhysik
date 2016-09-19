@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using System.IO.Ports;
 
 namespace LightControll
@@ -15,6 +16,7 @@ namespace LightControll
     {
 
         static SerialPort myport = new SerialPort();
+        static int num = 0;
 
         public Form1()
         {
@@ -24,30 +26,36 @@ namespace LightControll
 
         private void vScrollBar1_ValueChanged(object sender, EventArgs e)
         {
-            //label1.Text = Bar.Value.ToString();
+           
+            
+
+            label1.Text = Bar.Value.ToString();
        
+
             byte i = (byte)Bar.Value;
             try
             {
                 send(id: 1, value: i);
             }
-            catch { searchPorts(); }         
+            catch { searchPorts(); }
+
+           
         }
 
-
          public static void searchPorts() // port Suche
-        {           
+        {
+           
                 string[] ports = SerialPort.GetPortNames();
-                foreach (string port in ports)
+                for (int i = 0; i < ports.Length; i++)
                 {
-                if (setupPorts(port) == true)
+                if (setupPorts(ports[i]) == true)
                 {
-                    for (byte timeout=42;timeout>0;timeout-- )
-                        if (myport.ReadBufferSize > 0)
+
+                    if (myport.ReadBufferSize > 0)
+                    {
+                        if (myport.ReadChar() == 'B')
                         {
-                              if (myport.ReadChar() == 'B')
-                        {
-                              return;
+                            return;
                         }
                     }
                     myport.Close();
@@ -65,11 +73,20 @@ namespace LightControll
 
 
 
+
+
+
+         
+
+
+
         private static bool setupPorts(string name) //PortSetup
         {
 
             myport.BaudRate = 20000;
             myport.PortName = name;
+                myport.DiscardOutBuffer();
+                return true;
             myport.RtsEnable = true;
             myport.DtrEnable = true;
             try
@@ -81,8 +98,6 @@ namespace LightControll
                 myport.WriteTimeout = 100;
 
                 myport.DiscardInBuffer();
-                myport.DiscardOutBuffer();
-                return true;
             }
             catch { return false; }
         }
@@ -98,13 +113,13 @@ namespace LightControll
             }
         }
 
-        
 
-        private void Form1_Load(object sender, EventArgs e)
+
+        public bool createHTML(byte[] brightness)
         {
+            System.IO.File.WriteAllLines(@"", "");
 
+            return true;
         }
-
-       
     }
 }
