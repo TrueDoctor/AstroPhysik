@@ -11,7 +11,7 @@ using System.IO;
 using System.IO.Ports;
 using ReturnL;
 
-namespace LightControll
+namespace LightControl
 {
     public partial class Form1 : Form
     {
@@ -173,5 +173,11 @@ namespace LightControll
 
             return true;
         }
+
+        private void Form1_Load(object sender, System.EventArgs e)
+        {
+
+        }
+
     }
 }

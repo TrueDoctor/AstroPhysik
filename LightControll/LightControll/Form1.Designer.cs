@@ -1,4 +1,4 @@
-﻿namespace LightControll
+﻿namespace LightControl
 {
     partial class Form1
     {
@@ -62,7 +62,7 @@
             this.Bar.Size = new System.Drawing.Size(30, 30);
             this.Bar.TabIndex = 0;
             this.Bar.Value = 10;
-            
+
             this.Bar.ValueChanged += new System.EventHandler(this.vScrollBar1_ValueChanged);
             // 
             // label1
@@ -127,7 +127,7 @@
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "LED 2";
-         
+
             // 
             // panel3
             // 
@@ -200,7 +200,7 @@
             this.vScrollBar5.Size = new System.Drawing.Size(30, 30);
             this.vScrollBar5.TabIndex = 9;
             this.vScrollBar5.Value = 10;
-           
+
             // 
             // label6
             // 
@@ -210,7 +210,7 @@
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "LED 6";
-           
+
             // 
             // panel6
             // 
@@ -220,7 +220,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(32, 32);
             this.panel6.TabIndex = 11;
-           
+
             // 
             // Form1
             // 
