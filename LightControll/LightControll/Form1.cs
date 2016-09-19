@@ -52,9 +52,13 @@ namespace LightControl
 
         }
 
-        public  byte[] brightnessGet()
+
+
+
+
+        private  byte[] brightnessGet()
         {
-            byte[] brightness = new byte[2];
+            byte[] brightness = new byte[6];
             brightness[0] = (byte) Bar1.Value;
             brightness[1] = (byte)Bar2.Value;
             brightness[2] = (byte)Bar3.Value;
@@ -193,6 +197,11 @@ namespace LightControl
                 send(id: 6, value: i);
             }
             catch { searchPorts(); }
+        }
+
+        private void Button_Click(object sender, EventArgs e)
+        {
+            createHTML(brightnessGet());
         }
     }
 }

@@ -46,6 +46,7 @@
             this.Bar6 = new System.Windows.Forms.VScrollBar();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.Button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -66,7 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 54);
+            this.label1.Location = new System.Drawing.Point(26, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 1;
@@ -76,7 +77,7 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.Bar4);
-            this.panel1.Location = new System.Drawing.Point(169, 79);
+            this.panel1.Location = new System.Drawing.Point(158, 65);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(32, 32);
             this.panel1.TabIndex = 2;
@@ -94,7 +95,7 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.Bar3);
-            this.panel2.Location = new System.Drawing.Point(126, 79);
+            this.panel2.Location = new System.Drawing.Point(115, 65);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(32, 32);
             this.panel2.TabIndex = 4;
@@ -120,7 +121,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(80, 54);
+            this.label2.Location = new System.Drawing.Point(69, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 3;
@@ -130,7 +131,7 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.Bar5);
-            this.panel3.Location = new System.Drawing.Point(212, 79);
+            this.panel3.Location = new System.Drawing.Point(201, 65);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(32, 32);
             this.panel3.TabIndex = 6;
@@ -147,7 +148,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(123, 54);
+            this.label3.Location = new System.Drawing.Point(112, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 5;
@@ -157,7 +158,7 @@
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.Bar1);
-            this.panel4.Location = new System.Drawing.Point(40, 79);
+            this.panel4.Location = new System.Drawing.Point(29, 65);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(32, 32);
             this.panel4.TabIndex = 8;
@@ -165,7 +166,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(166, 54);
+            this.label4.Location = new System.Drawing.Point(155, 40);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 7;
@@ -175,7 +176,7 @@
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.Bar2);
-            this.panel5.Location = new System.Drawing.Point(83, 79);
+            this.panel5.Location = new System.Drawing.Point(72, 65);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(32, 32);
             this.panel5.TabIndex = 4;
@@ -183,7 +184,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(209, 54);
+            this.label5.Location = new System.Drawing.Point(198, 40);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 3;
@@ -201,7 +202,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(252, 54);
+            this.label6.Location = new System.Drawing.Point(241, 40);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 10;
@@ -211,16 +212,27 @@
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.Bar6);
-            this.panel6.Location = new System.Drawing.Point(255, 79);
+            this.panel6.Location = new System.Drawing.Point(244, 65);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(32, 32);
             this.panel6.TabIndex = 11;
+            // 
+            // Button
+            // 
+            this.Button.Location = new System.Drawing.Point(309, 67);
+            this.Button.Name = "Button";
+            this.Button.Size = new System.Drawing.Size(89, 29);
+            this.Button.TabIndex = 12;
+            this.Button.Text = "Auswertung";
+            this.Button.UseVisualStyleBackColor = true;
+            this.Button.Click += new System.EventHandler(this.Button_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 164);
+            this.ClientSize = new System.Drawing.Size(410, 164);
+            this.Controls.Add(this.Button);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -266,6 +278,7 @@
         private System.Windows.Forms.VScrollBar Bar6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button Button;
     }
 }
 
