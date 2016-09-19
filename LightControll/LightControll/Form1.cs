@@ -30,25 +30,29 @@ namespace LightControl
         {
 
             string[] ports = SerialPort.GetPortNames();
-            for (int i = 0; i < ports.Length; i++)
+            foreach(string port in ports)
                 {
-                if (setupPorts(ports[i]) == true)
+                for (int i = 0; i < 42; i++)
                 {
-
-                    if (myport.ReadBufferSize > 0)
+                    if (setupPorts(port) == true)
                     {
-                        if (myport.ReadChar() == 'B')
+
+                        if (myport.ReadBufferSize > 0)
                         {
-                            return;
+                            if (myport.ReadChar() == 'B')
+                            {
+                                return;
+                            }
                         }
+                        myport.Close();
                     }
-                    myport.Close();
                 }
             }
 
             MessageBox.Show("Keine Verbindung zur LightBox", "Lightcontrol",
-            MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
-            searchPorts();
+            MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            //searchPorts();
+
 
         }
 
