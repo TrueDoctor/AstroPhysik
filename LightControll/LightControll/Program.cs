@@ -9,6 +9,7 @@ namespace LightControll
 {
     static class Program
     {
+
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>
@@ -58,8 +59,14 @@ namespace LightControll
             myport.DiscardOutBuffer();
         }
 
-       
+        public bool createHTML(byte[] brightness)
+        {
+            System.IO.File.WriteAllLines(@"", "");
 
-        
+            return true;
+        }
+
+
+
     }
 }
