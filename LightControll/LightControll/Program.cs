@@ -9,6 +9,7 @@ namespace LightControll
 {
     static class Program
     {
+
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>
@@ -30,14 +31,42 @@ namespace LightControll
 
 
         }
-       
-
-        
-    }
 
 
-    static class html
-    {
+
+
+
+
+
+
+
+
+
+
+
+        private static void setup(string name)
+        {
+            
+            myport.BaudRate = 20000;
+            myport.PortName = name;
+            myport.Open();
+
+            //initialisierung
+            myport.DiscardNull = true;
+            myport.WriteTimeout = 100;
+
+            myport.DiscardInBuffer();
+            myport.DiscardOutBuffer();
+        }
+
+        public bool createHTML(byte[] brightness)
+        {
+            System.IO.File.WriteAllLines(@"", "");
+
+            return true;
+        }
+
+
 
     }
 }
