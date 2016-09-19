@@ -59,9 +59,5 @@ namespace LightControl
             myport.DiscardOutBuffer();
         }
 
-       
-
-
-
     }
 }

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReturnL
+namespace LightControl
 {
     class ReturnLines
     {
-        string[] line(string[] brightness)
+        public static string[] line(byte[] brightness)
         {
             string[] lines =
             {
