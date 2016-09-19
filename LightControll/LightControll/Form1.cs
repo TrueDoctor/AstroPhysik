@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.IO.Ports;
 
-namespace LightControll
+namespace LightControl
 {
     public partial class Form1 : Form
     {
