@@ -32,7 +32,7 @@ namespace LightControl
             string[] ports = SerialPort.GetPortNames();
             foreach(string port in ports)
                 {
-                for (int i = 0; i < 42; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     if (setupPorts(port) == true)
                     {
