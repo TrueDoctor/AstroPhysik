@@ -152,7 +152,7 @@ namespace LightControl
        
         private void Bar1_Scroll(object sender, ScrollEventArgs e)
         {
-            byte i = (byte)Bar1.Value;
+            byte i = (byte)(255-Bar1.Value);
             try
             {
                 if (!check1.Checked)
@@ -162,7 +162,7 @@ namespace LightControl
         }
         private void Bar2_Scroll(object sender, ScrollEventArgs e)
         {
-            byte i = (byte)Bar2.Value;
+            byte i = (byte)(255-Bar2.Value);
             try
             {
                 if (!check2.Checked)
@@ -172,7 +172,7 @@ namespace LightControl
         }
         private void Bar3_Scroll(object sender, ScrollEventArgs e)
         {
-            byte i = (byte)Bar3.Value;
+            byte i = (byte)(255-Bar3.Value);
             try
             {
                 if (!check3.Checked)
@@ -182,7 +182,7 @@ namespace LightControl
         }
         private void Bar4_Scroll(object sender, ScrollEventArgs e)
         {
-            byte i = (byte)Bar4.Value;
+            byte i = (byte)(255-Bar4.Value);
             try
             {
                 if (!check4.Checked)
@@ -192,7 +192,7 @@ namespace LightControl
         }
         private void Bar5_Scroll(object sender, ScrollEventArgs e)
         {
-            byte i = (byte)Bar5.Value;
+            byte i = (byte)(255-Bar5.Value);
             try
             {
                 if (!check5.Checked)
@@ -202,7 +202,7 @@ namespace LightControl
         }
         private void Bar6_Scroll(object sender, ScrollEventArgs e)
         {
-            byte i = (byte)Bar6.Value;
+            byte i = (byte)(255-Bar6.Value);
             try
             {
                 if (!check6.Checked)
