@@ -63,12 +63,12 @@ namespace LightControl
         private  byte[] brightnessGet()
         {
             byte[] brightness = new byte[6];
-            brightness[0] = (byte) Bar1.Value;
-            brightness[1] = (byte)Bar2.Value;
-            brightness[2] = (byte)Bar3.Value;
-            brightness[3] = (byte)Bar4.Value;
-            brightness[4] = (byte)Bar5.Value;
-            brightness[5] = (byte)Bar6.Value;
+            brightness[0] = (byte)(255-Bar1.Value);
+            brightness[1] = (byte)(255-Bar2.Value);
+            brightness[2] = (byte)(255-Bar3.Value);
+            brightness[3] = (byte)(255-Bar4.Value);
+            brightness[4] = (byte)(255-Bar5.Value);
+            brightness[5] = (byte)(255-Bar6.Value);
             return brightness;
 
         }
