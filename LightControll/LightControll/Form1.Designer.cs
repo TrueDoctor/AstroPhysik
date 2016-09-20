@@ -48,21 +48,21 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.Button = new System.Windows.Forms.Button();
             this.sperren = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.sperrPanel = new System.Windows.Forms.Panel();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.check6 = new System.Windows.Forms.CheckBox();
+            this.check5 = new System.Windows.Forms.CheckBox();
+            this.check1 = new System.Windows.Forms.CheckBox();
+            this.check4 = new System.Windows.Forms.CheckBox();
+            this.check2 = new System.Windows.Forms.CheckBox();
+            this.check3 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.sperrPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Bar1
@@ -247,20 +247,20 @@
             this.sperren.TabIndex = 20;
             this.sperren.Text = "sperren";
             // 
-            // panel8
+            // sperrPanel
             // 
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.checkBox2);
-            this.panel8.Controls.Add(this.checkBox3);
-            this.panel8.Controls.Add(this.checkBox4);
-            this.panel8.Controls.Add(this.checkBox5);
-            this.panel8.Controls.Add(this.checkBox6);
-            this.panel8.Controls.Add(this.checkBox7);
-            this.panel8.Controls.Add(this.checkBox8);
-            this.panel8.Location = new System.Drawing.Point(63, 79);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(247, 29);
-            this.panel8.TabIndex = 20;
+            this.sperrPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sperrPanel.Controls.Add(this.checkBox2);
+            this.sperrPanel.Controls.Add(this.check6);
+            this.sperrPanel.Controls.Add(this.check5);
+            this.sperrPanel.Controls.Add(this.check1);
+            this.sperrPanel.Controls.Add(this.check4);
+            this.sperrPanel.Controls.Add(this.check2);
+            this.sperrPanel.Controls.Add(this.check3);
+            this.sperrPanel.Location = new System.Drawing.Point(63, 79);
+            this.sperrPanel.Name = "sperrPanel";
+            this.sperrPanel.Size = new System.Drawing.Size(247, 29);
+            this.sperrPanel.TabIndex = 20;
             // 
             // checkBox2
             // 
@@ -271,59 +271,59 @@
             this.checkBox2.TabIndex = 19;
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // check6
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(223, 7);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 18;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.check6.AutoSize = true;
+            this.check6.Location = new System.Drawing.Point(223, 7);
+            this.check6.Name = "check6";
+            this.check6.Size = new System.Drawing.Size(15, 14);
+            this.check6.TabIndex = 18;
+            this.check6.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // check5
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(180, 7);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 18;
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.check5.AutoSize = true;
+            this.check5.Location = new System.Drawing.Point(180, 7);
+            this.check5.Name = "check5";
+            this.check5.Size = new System.Drawing.Size(15, 14);
+            this.check5.TabIndex = 18;
+            this.check5.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // check1
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(8, 7);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 14;
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.check1.AutoSize = true;
+            this.check1.Location = new System.Drawing.Point(8, 7);
+            this.check1.Name = "check1";
+            this.check1.Size = new System.Drawing.Size(15, 14);
+            this.check1.TabIndex = 14;
+            this.check1.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // check4
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(137, 7);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
-            this.checkBox6.TabIndex = 17;
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.check4.AutoSize = true;
+            this.check4.Location = new System.Drawing.Point(137, 7);
+            this.check4.Name = "check4";
+            this.check4.Size = new System.Drawing.Size(15, 14);
+            this.check4.TabIndex = 17;
+            this.check4.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // check2
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(51, 7);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(15, 14);
-            this.checkBox7.TabIndex = 15;
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.check2.AutoSize = true;
+            this.check2.Location = new System.Drawing.Point(51, 7);
+            this.check2.Name = "check2";
+            this.check2.Size = new System.Drawing.Size(15, 14);
+            this.check2.TabIndex = 15;
+            this.check2.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // check3
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(94, 7);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(15, 14);
-            this.checkBox8.TabIndex = 16;
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.check3.AutoSize = true;
+            this.check3.Location = new System.Drawing.Point(94, 7);
+            this.check3.Name = "check3";
+            this.check3.Size = new System.Drawing.Size(15, 14);
+            this.check3.TabIndex = 16;
+            this.check3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -344,7 +344,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.sperrPanel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -353,8 +353,8 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.sperrPanel.ResumeLayout(false);
+            this.sperrPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,14 +382,14 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button Button;
         private System.Windows.Forms.Label sperren;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel sperrPanel;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox check6;
+        private System.Windows.Forms.CheckBox check5;
+        private System.Windows.Forms.CheckBox check1;
+        private System.Windows.Forms.CheckBox check4;
+        private System.Windows.Forms.CheckBox check2;
+        private System.Windows.Forms.CheckBox check3;
     }
 }
 

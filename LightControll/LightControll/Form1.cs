@@ -155,7 +155,8 @@ namespace LightControl
             byte i = (byte)Bar1.Value;
             try
             {
-                send(id: 1, value: i);
+                if (!check1.Checked)
+                    send(id: 1, value: i);
             }
             catch { searchPorts(); }
         }
@@ -164,7 +165,8 @@ namespace LightControl
             byte i = (byte)Bar2.Value;
             try
             {
-                send(id: 2, value: i);
+                if (!check2.Checked)
+                    send(id: 2, value: i);
             }
             catch { searchPorts(); }
         }
@@ -173,7 +175,8 @@ namespace LightControl
             byte i = (byte)Bar3.Value;
             try
             {
-                send(id: 3, value: i);
+                if (!check3.Checked)
+                    send(id: 3, value: i);
             }
             catch { searchPorts(); }
         }
@@ -182,7 +185,8 @@ namespace LightControl
             byte i = (byte)Bar4.Value;
             try
             {
-                send(id: 4, value: i);
+                if (!check4.Checked)
+                    send(id: 4, value: i);
             }
             catch { searchPorts(); }
         }
@@ -191,7 +195,8 @@ namespace LightControl
             byte i = (byte)Bar5.Value;
             try
             {
-                send(id: 5, value: i);
+                if (!check5.Checked)
+                    send(id: 5, value: i);
             }
             catch { searchPorts(); }
         }
@@ -200,7 +205,8 @@ namespace LightControl
             byte i = (byte)Bar6.Value;
             try
             {
-                send(id: 6, value: i);
+                if (!check6.Checked)
+                    send(id: 6, value: i);
             }
             catch { searchPorts(); }
         }
