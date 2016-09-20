@@ -39,7 +39,7 @@ namespace LightControl
 
                         if (myport.ReadBufferSize > 0)
                         {
-                            if (myport.ReadChar() == 'B')
+                            if (myport.ReadByte() == 42)
                             {
                                 return;
                             }

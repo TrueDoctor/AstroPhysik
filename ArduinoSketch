@@ -1,23 +1,27 @@
-byte led [7] = {2, 3, 5, 6, 9, 10, 11};  
-byte id = 0;
-byte brightness = 0;
-void setup() {
-  Serial.begin(20000);
+//deklarierung von globalen Variablen
+byte led [7] = {2, 3, 5, 6, 9, 10, 11};   //weise dem Statusindikator und den Led's 1-6 die Hardwarepins zu   
+byte id = 0;                              //temporäre ledID 
+byte brightness = 0;                      //temporäre Helligkeit
+
+// initialisierung
+void setup() {      
+  Serial.begin(20000);                    //Öffnen des Seriellen ports mit einer Baud Rate von 20000 Zeichen/Sekunde = 9,78kb/s
   
- for (int i = 0; i <= 6; i++)
-    pinMode(led[i], OUTPUT);
+ for (int i = 0; i <= 6; i++)             
+    pinMode(led[i], OUTPUT);              //Konfigutation der I/O Pins des Arduino
 }
 
-
+//Main loop
 void loop() {
-  if (Serial.available() > 1) {
-    digitalWrite(2,HIGH);
-    id = Serial.read();
-    brightness = Serial.read();
-    analogWrite(led[id], brightness);
-    }
+  if (Serial.available() > 1) {           //falls mehr als ein Zeichen im Eingangspuffer
+    digitalWrite(led[0],HIGH);            //Indikator an
+    id = Serial.read();                   //erstes zeichen im Puffer  -> ID           Eintrag wird aus Puffer gelöscht
+    brightness = Serial.read();           //zweites zeichen im Puffer -> helligkeit   Eintrag wird aus Puffer gelöscht
+    analogWrite(led[id], brightness);     //setzen der Ausgangsspannung für die Led[ID] auf die helligkeit
+  }
     
-    Serial.println('B');
-    digitalWrite(2,LOW);
+    Serial.println('*');                  //sendet 42 über den Seiellen port um Empfangsbereitschaft zu zeigen
+                                          //und damit Lightcontroll das gerät identifizieren kann
+    digitalWrite(led[0],LOW);             //Indikator aus um zu zeigen, dass Lesevorgang beendet ist
 
 }
