@@ -288,6 +288,7 @@
             this.check6.Size = new System.Drawing.Size(15, 14);
             this.check6.TabIndex = 18;
             this.check6.UseVisualStyleBackColor = true;
+            this.check6.CheckedChanged += new System.EventHandler(this.check6_CheckedChanged);
             // 
             // check5
             // 
@@ -297,6 +298,7 @@
             this.check5.Size = new System.Drawing.Size(15, 14);
             this.check5.TabIndex = 18;
             this.check5.UseVisualStyleBackColor = true;
+            this.check5.CheckedChanged += new System.EventHandler(this.check5_CheckedChanged);
             // 
             // check1
             // 
@@ -306,6 +308,7 @@
             this.check1.Size = new System.Drawing.Size(15, 14);
             this.check1.TabIndex = 14;
             this.check1.UseVisualStyleBackColor = true;
+            this.check1.CheckedChanged += new System.EventHandler(this.check1_CheckedChanged);
             // 
             // check4
             // 
@@ -315,6 +318,7 @@
             this.check4.Size = new System.Drawing.Size(15, 14);
             this.check4.TabIndex = 17;
             this.check4.UseVisualStyleBackColor = true;
+            this.check4.CheckedChanged += new System.EventHandler(this.check4_CheckedChanged);
             // 
             // check2
             // 
@@ -324,6 +328,7 @@
             this.check2.Size = new System.Drawing.Size(15, 14);
             this.check2.TabIndex = 15;
             this.check2.UseVisualStyleBackColor = true;
+            this.check2.CheckedChanged += new System.EventHandler(this.check2_CheckedChanged);
             // 
             // check3
             // 
@@ -333,6 +338,7 @@
             this.check3.Size = new System.Drawing.Size(15, 14);
             this.check3.TabIndex = 16;
             this.check3.UseVisualStyleBackColor = true;
+            this.check3.CheckedChanged += new System.EventHandler(this.check3_CheckedChanged);
             // 
             // button1
             // 
@@ -376,6 +382,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sperrPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "LightControl";

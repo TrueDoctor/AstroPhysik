@@ -227,6 +227,9 @@ namespace LightControl
 
         private void button1_Click(object sender, EventArgs e) //Standardwerte einrichten
         {
+            check1.Checked = false; //Unlock Event for setting values
+            check6.Checked = false;
+
             Bar1.Value = 255;
             Bar1_Scroll(null, null);
             Bar6.Value = 1;
@@ -237,6 +240,13 @@ namespace LightControl
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Bar1.Enabled = true;
+            Bar2.Enabled = true;
+            Bar3.Enabled = true;
+            Bar4.Enabled = true;
+            Bar5.Enabled = true;
+            Bar6.Enabled = true;
+
             Bar1.Value = 0;
             Bar1_Scroll(null, null);
             Bar2.Value = 0;
@@ -249,6 +259,48 @@ namespace LightControl
             Bar5_Scroll(null, null); 
             Bar6.Value = 0;
             Bar6_Scroll(null, null);
+            
+            checkRecheck();
+        }
+
+        private void checkRecheck()
+        {
+            check1_CheckedChanged(null, null);
+            check2_CheckedChanged(null, null);
+            check3_CheckedChanged(null, null);
+            check4_CheckedChanged(null, null);
+            check5_CheckedChanged(null, null);
+            check6_CheckedChanged(null, null);
+        }
+
+        private void check1_CheckedChanged(object sender, EventArgs e)
+        {
+            Bar1.Enabled = check1.Checked ? false : true;
+        }
+
+        private void check2_CheckedChanged(object sender, EventArgs e)
+        {
+            Bar2.Enabled = check2.Checked ? false : true;
+        }
+
+        private void check3_CheckedChanged(object sender, EventArgs e)
+        {
+            Bar3.Enabled = check3.Checked ? false : true;
+        }
+
+        private void check4_CheckedChanged(object sender, EventArgs e)
+        {
+            Bar4.Enabled = check4.Checked ? false : true;
+        }
+
+        private void check5_CheckedChanged(object sender, EventArgs e)
+        {
+            Bar5.Enabled = check5.Checked ? false : true;
+        }
+
+        private void check6_CheckedChanged(object sender, EventArgs e)
+        {
+            Bar6.Enabled = check6.Checked ? false : true;
         }
     }
 }
