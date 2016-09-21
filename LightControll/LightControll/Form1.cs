@@ -17,7 +17,6 @@ namespace LightControl
     {
 
         public static SerialPort myport = new SerialPort();
-        static int num = 0;
 
         public Form1()
         {
@@ -224,6 +223,32 @@ namespace LightControl
         private void Button_Click(object sender, EventArgs e)
         {
             createHTML(brightnessGet());
+        }
+
+        private void button1_Click(object sender, EventArgs e) //Standardwerte einrichten
+        {
+            Bar1.Value = 255;
+            Bar1_Scroll(null, null);
+            Bar6.Value = 1;
+            Bar6_Scroll(null, null);
+            check1.Checked = true;
+            check6.Checked = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Bar1.Value = 0;
+            Bar1_Scroll(null, null);
+            Bar2.Value = 0;
+            Bar2_Scroll(null, null);
+            Bar3.Value = 0;
+            Bar3_Scroll(null, null);
+            Bar4.Value = 0;
+            Bar4_Scroll(null, null);
+            Bar5.Value = 0;
+            Bar5_Scroll(null, null); 
+            Bar6.Value = 0;
+            Bar6_Scroll(null, null);
         }
     }
 }
