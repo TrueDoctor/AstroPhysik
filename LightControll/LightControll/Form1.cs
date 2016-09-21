@@ -22,6 +22,7 @@ namespace LightControl
         {
             InitializeComponent();
             Thread.Sleep(50);
+            initializeColors();
             searchPorts();
         }
 
@@ -75,7 +76,11 @@ namespace LightControl
 
         }
 
+        void initializeColors()
+        {
+            this.BackColor = ColorTranslator.FromHtml("#FFFFFF");
 
+        }
 
 
 
@@ -156,6 +161,7 @@ namespace LightControl
         {
             byte[] ab = { 123, 123 };
             ReturnLines.line(ab);
+            BackColor = ColorTranslator.FromHtml("#1C1C29");  
         }
 
        
@@ -240,28 +246,35 @@ namespace LightControl
 
         private void button2_Click(object sender, EventArgs e)
         {
-            check1.Checked = false;
-            check2.Checked = false;
-            check3.Checked = false;
-            check4.Checked = false;
-            check5.Checked = false;
-            check6.Checked = false;
+            DialogResult result1 = MessageBox.Show("Sind sie sich sicher?",
+            "Alle Werte zurücksetzen",
+            MessageBoxButtons.YesNo);
+
+            if (result1 == DialogResult.Yes)
+            {
+                check1.Checked = false;
+                check2.Checked = false;
+                check3.Checked = false;
+                check4.Checked = false;
+                check5.Checked = false;
+                check6.Checked = false;
 
 
-            Bar1.Value = 255;
-            Bar1_Scroll(null, null);
-            Bar2.Value = 255;
-            Bar2_Scroll(null, null);
-            Bar3.Value = 255;
-            Bar3_Scroll(null, null);
-            Bar4.Value = 255;
-            Bar4_Scroll(null, null);
-            Bar5.Value = 255;
-            Bar5_Scroll(null, null); 
-            Bar6.Value = 255;
-            Bar6_Scroll(null, null);
-            
-            checkRecheck();
+                Bar1.Value = 255;
+                Bar1_Scroll(null, null);
+                Bar2.Value = 255;
+                Bar2_Scroll(null, null);
+                Bar3.Value = 255;
+                Bar3_Scroll(null, null);
+                Bar4.Value = 255;
+                Bar4_Scroll(null, null);
+                Bar5.Value = 255;
+                Bar5_Scroll(null, null);
+                Bar6.Value = 255;
+                Bar6_Scroll(null, null);
+
+                checkRecheck();
+            }
         }
 
         private void checkRecheck()

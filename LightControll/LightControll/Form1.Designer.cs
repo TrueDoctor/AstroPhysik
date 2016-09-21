@@ -344,7 +344,7 @@
             // 
             this.Standard.Location = new System.Drawing.Point(70, 114);
             this.Standard.Name = "Standard";
-            this.Standard.Size = new System.Drawing.Size(249, 36);
+            this.Standard.Size = new System.Drawing.Size(120, 36);
             this.Standard.TabIndex = 21;
             this.Standard.Text = "Standard für LED 1/6 setzen";
             this.Standard.UseVisualStyleBackColor = true;
@@ -352,9 +352,9 @@
             // 
             // Reset
             // 
-            this.Reset.Location = new System.Drawing.Point(70, 156);
+            this.Reset.Location = new System.Drawing.Point(199, 114);
             this.Reset.Name = "Reset";
-            this.Reset.Size = new System.Drawing.Size(249, 36);
+            this.Reset.Size = new System.Drawing.Size(120, 36);
             this.Reset.TabIndex = 22;
             this.Reset.Text = "Alle Werte zutücksetzen";
             this.Reset.UseVisualStyleBackColor = true;
@@ -365,7 +365,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(432, 199);
+            this.ClientSize = new System.Drawing.Size(436, 153);
             this.Controls.Add(this.Reset);
             this.Controls.Add(this.Standard);
             this.Controls.Add(this.Button);
