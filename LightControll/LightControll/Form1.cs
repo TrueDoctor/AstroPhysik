@@ -230,9 +230,9 @@ namespace LightControl
             check1.Checked = false; //Unlock Event for setting values
             check6.Checked = false;
 
-            Bar1.Value = 255;
+            Bar1.Value = 0;
             Bar1_Scroll(null, null);
-            Bar6.Value = 1;
+            Bar6.Value = 254;
             Bar6_Scroll(null, null);
             check1.Checked = true;
             check6.Checked = true;
@@ -247,17 +247,17 @@ namespace LightControl
             Bar5.Enabled = true;
             Bar6.Enabled = true;
 
-            Bar1.Value = 0;
+            Bar1.Value = 255;
             Bar1_Scroll(null, null);
-            Bar2.Value = 0;
+            Bar2.Value = 255;
             Bar2_Scroll(null, null);
-            Bar3.Value = 0;
+            Bar3.Value = 255;
             Bar3_Scroll(null, null);
-            Bar4.Value = 0;
+            Bar4.Value = 255;
             Bar4_Scroll(null, null);
-            Bar5.Value = 0;
+            Bar5.Value = 255;
             Bar5_Scroll(null, null); 
-            Bar6.Value = 0;
+            Bar6.Value = 255;
             Bar6_Scroll(null, null);
             
             checkRecheck();
