@@ -240,12 +240,13 @@ namespace LightControl
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Bar1.Enabled = true;
-            Bar2.Enabled = true;
-            Bar3.Enabled = true;
-            Bar4.Enabled = true;
-            Bar5.Enabled = true;
-            Bar6.Enabled = true;
+            check1.Checked = false;
+            check2.Checked = false;
+            check3.Checked = false;
+            check4.Checked = false;
+            check5.Checked = false;
+            check6.Checked = false;
+
 
             Bar1.Value = 255;
             Bar1_Scroll(null, null);

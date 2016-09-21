@@ -57,8 +57,8 @@
             this.check4 = new System.Windows.Forms.CheckBox();
             this.check2 = new System.Windows.Forms.CheckBox();
             this.check3 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Standard = new System.Windows.Forms.Button();
+            this.Reset = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -340,33 +340,34 @@
             this.check3.UseVisualStyleBackColor = true;
             this.check3.CheckedChanged += new System.EventHandler(this.check3_CheckedChanged);
             // 
-            // button1
+            // Standard
             // 
-            this.button1.Location = new System.Drawing.Point(70, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(249, 36);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Standard für LED 1/6 setzen";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Standard.Location = new System.Drawing.Point(70, 114);
+            this.Standard.Name = "Standard";
+            this.Standard.Size = new System.Drawing.Size(249, 36);
+            this.Standard.TabIndex = 21;
+            this.Standard.Text = "Standard für LED 1/6 setzen";
+            this.Standard.UseVisualStyleBackColor = true;
+            this.Standard.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // Reset
             // 
-            this.button2.Location = new System.Drawing.Point(70, 156);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(249, 36);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Alle Werte zutücksetzen";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Reset.Location = new System.Drawing.Point(70, 156);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(249, 36);
+            this.Reset.TabIndex = 22;
+            this.Reset.Text = "Alle Werte zutücksetzen";
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(432, 199);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Reset);
+            this.Controls.Add(this.Standard);
             this.Controls.Add(this.Button);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel6);
@@ -382,6 +383,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sperrPanel);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -429,8 +431,8 @@
         private System.Windows.Forms.CheckBox check4;
         private System.Windows.Forms.CheckBox check2;
         private System.Windows.Forms.CheckBox check3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Standard;
+        private System.Windows.Forms.Button Reset;
     }
 }
 
