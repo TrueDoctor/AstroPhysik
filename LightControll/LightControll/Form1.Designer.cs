@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Bar1 = new System.Windows.Forms.VScrollBar();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -249,9 +250,9 @@
             this.sperren.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sperren.Location = new System.Drawing.Point(3, 84);
             this.sperren.Name = "sperren";
-            this.sperren.Size = new System.Drawing.Size(54, 16);
+            this.sperren.Size = new System.Drawing.Size(56, 16);
             this.sperren.TabIndex = 20;
-            this.sperren.Text = "sperren";
+            this.sperren.Text = "Sperren";
             // 
             // sperrPanel
             // 
@@ -351,8 +352,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sperrPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "LightControl";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

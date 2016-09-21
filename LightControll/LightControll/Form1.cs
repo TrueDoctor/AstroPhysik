@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.IO.Ports;
+using System.Threading;
 
 namespace LightControl
 {
@@ -21,7 +22,8 @@ namespace LightControl
         public Form1()
         {
             InitializeComponent();
-            //searchPorts();
+            Thread.Sleep(50);
+            searchPorts();
         }
 
         
@@ -49,9 +51,10 @@ namespace LightControl
                 }
             }
 
-            MessageBox.Show("Keine Verbindung zur LightBox", "Lightcontrol",
-            MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            //searchPorts();
+            DialogResult result = MessageBox.Show("Keine Verbindung zur LightBox", "Lightcontrol", MessageBoxButtons.RetryCancel, MessageBoxIcon.Asterisk);
+
+            if (result == DialogResult.Cancel) { return; }
+            else if (result == DialogResult.Retry) { searchPorts();}
 
 
         }
@@ -94,7 +97,7 @@ namespace LightControl
             {
                 myport.Open();
 
-                //initialisierung
+                //Initialisierung
 
                 myport.DiscardNull = true;
                 myport.WriteTimeout = 100;
@@ -123,19 +126,26 @@ namespace LightControl
             SaveFileDialog sFD = new SaveFileDialog();
             sFD.Filter = "HTML Datei|*.html";
             sFD.Title = "Ergebnisse speichern unter:";
-            sFD.ShowDialog();
+            sFD.ShowDialog(); //Zeigt Dialog zum Abspeichern an
             if (sFD.FileName != "")
             {
                 try
                 {
-                    System.IO.File.WriteAllLines(sFD.FileName, ReturnLines.line(brightness));
+                    System.IO.File.WriteAllText(sFD.FileName, String.Join("", ReturnLines.line(brightness))); //Schreibt den bearbeiteten HTML Code in neue Datei (ReturnLines.lines ist in einer extra Datei untergebracht)
+                    System.Diagnostics.Process startHTML = new System.Diagnostics.Process();                  //Code zum Öffnen der Erstellten Datei
+                    System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                    startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                    startInfo.FileName = "cmd.exe";
+                    startInfo.Arguments = "/C \"" + sFD.FileName + "\"";
+                    startHTML.StartInfo = startInfo;
+                    startHTML.Start();
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show("Ausnahme trat auf: \n" + e, "Fehler" , MessageBoxButtons.OK);
+                    MessageBox.Show("Ausnahme trat auf: \n" + e, "Fehler" , MessageBoxButtons.OK); //Fehlermeldung für unbehandelten Fehler
                 }
             }
-            else
+            else //Fehlermeldung bei leerem Dateinamen
             {
                 MessageBox.Show("Es wurde kein Dateiname eingegeben.", "Fehlender Dateiname", MessageBoxButtons.OK);
             };
