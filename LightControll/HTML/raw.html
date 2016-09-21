@@ -45,11 +45,12 @@
       height: 500px;}
       .jumbotron { margin:10px; border-radius:10px; background-color: #30303d; color: #E1EAFF }
     </style>
-    
-    <script> <!-- Script zum Erstellen eines Graphen mit den gegebenen Daten -->
+  
+    <!-- Script zum Erstellen eines Graphen mit den gegebenen Daten -->  
+    <script> 
       var chart = AmCharts.makeChart("chartdiv", {
         "titles": [{
-          "text": "Helligekeitsauswertung der LEDs",
+          "text": "Helligkeitsauswertung der LEDs",
           "size": 20
         }],
         "type": "serial",
@@ -79,8 +80,6 @@
         "valueAxes": [{
           "position": "left",
           "title": "Helligkeit",
-          "maximum": 260,
-          "strictMinMax": false
         }],
         "graphs": [{
           "id":"g1",
