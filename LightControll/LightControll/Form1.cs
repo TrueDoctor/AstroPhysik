@@ -316,5 +316,10 @@ namespace LightControl
         {
             Bar6.Enabled = check6.Checked ? false : true;
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Copyright: Timon Schulz und Dennis Kobert Gymnasium Josephinum");
+        }
     }
 }
