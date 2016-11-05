@@ -357,7 +357,7 @@
             this.Reset.Name = "Reset";
             this.Reset.Size = new System.Drawing.Size(120, 36);
             this.Reset.TabIndex = 22;
-            this.Reset.Text = "Alle Werte zutücksetzen";
+            this.Reset.Text = "Alle Werte zurücksetzen";
             this.Reset.UseVisualStyleBackColor = true;
             this.Reset.Click += new System.EventHandler(this.button2_Click);
             // 
