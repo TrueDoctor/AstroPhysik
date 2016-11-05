@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LightControl.Properties {
+namespace LightControl {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace LightControl.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class Form1 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal Form1() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace LightControl.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LightControl.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LightControl.Form1", typeof(Form1).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,28 @@ namespace LightControl.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///  &lt;head&gt;
+        ///    &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;!-- setzt Zeichencodierung auf Unicode --&gt;
+        ///    &lt;title&gt;Auswertung der Helligkeiten&lt;/title&gt; &lt;!-- Titel des Browser Tabs --&gt;   
+        ///    
+        ///    &lt;!-- Versuch, externe Skripte und Designs aus .exe-Verzeichnis zu laden --&gt;
+        ///   
+        ///    &lt;script src=&quot;@0\jquery-3.1.0.min.js&quot;&gt;&lt;/script&gt;
+        ///    
+        ///    &lt;script src=&quot;@0\amcharts.js&quot;&gt;&lt;/script&gt;
+        ///    &lt;script src=&quot;@0\serial.js&quot;&gt;&lt;/script&gt;
+        ///    &lt;script src=&quot;@0\plugins\export\export.min.js&quot;&gt;&lt;/script&gt;
+        ///    &lt;link rel=&quot;stylesheet [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string raw {
+            get {
+                return ResourceManager.GetString("raw", resourceCulture);
             }
         }
     }
