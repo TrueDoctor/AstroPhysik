@@ -28,7 +28,7 @@ namespace LightControl
 
         
 
-         public static void searchPorts() // port Suche
+         public static void searchPorts() //Sucht angeschlossenen Arduino
         {
 
             string[] ports = SerialPort.GetPortNames();
@@ -90,7 +90,7 @@ namespace LightControl
 
 
 
-         private static bool setupPorts(string name) //PortSetup
+         private static bool setupPorts(string name)
         {
 
             myport.BaudRate = 20000;
@@ -112,7 +112,7 @@ namespace LightControl
             catch { return false; }
         }
 
-        public void send(byte id, byte value) //Sende Funktion
+        public void send(byte id, byte value) //Übermitteln der Daten an den Arduino
         {
             if (myport.ReadBufferSize > 0)
             {
@@ -125,7 +125,7 @@ namespace LightControl
 
 
 
-        public bool createHTML(byte[] brightness)
+        public bool createHTML(byte[] brightness) //Auswertung der Daten
         {
             SaveFileDialog sFD = new SaveFileDialog();
             sFD.Filter = "HTML Datei|*.html";
@@ -165,7 +165,7 @@ namespace LightControl
         }
 
        
-        private void Bar1_Scroll(object sender, ScrollEventArgs e)
+        private void Bar1_Scroll(object sender, ScrollEventArgs e) //Ändern der Helligkeit
         {
             byte i = (byte)(255-Bar1.Value);
             try
@@ -173,7 +173,7 @@ namespace LightControl
                 if (!check1.Checked)
                     send(id: 1, value: i);
             }
-            catch { searchPorts(); }
+            catch { searchPorts(); } //Bei Verbindungsproblemen Arduino neu suchen
         }
         private void Bar2_Scroll(object sender, ScrollEventArgs e)
         {
@@ -233,7 +233,7 @@ namespace LightControl
 
         private void button1_Click(object sender, EventArgs e) //Standardwerte einrichten
         {
-            check1.Checked = false; //Unlock Event for setting values
+            check1.Checked = false; //Entsperrt Helligkeitstasten, um Werte einzurichten
             check6.Checked = false;
 
             Bar1.Value = 0;
@@ -244,7 +244,7 @@ namespace LightControl
             check6.Checked = true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) //Zurücksetzen der Werte
         {
             DialogResult result1 = MessageBox.Show("Sind sie sich sicher?",
             "Alle Werte zurücksetzen",
@@ -277,7 +277,7 @@ namespace LightControl
             }
         }
 
-        private void checkRecheck()
+        private void checkRecheck() //Wiederherstellen der Aktivierungszustände der Helligkeitstasten
         {
             check1_CheckedChanged(null, null);
             check2_CheckedChanged(null, null);
@@ -287,7 +287,7 @@ namespace LightControl
             check6_CheckedChanged(null, null);
         }
 
-        private void check1_CheckedChanged(object sender, EventArgs e)
+        private void check1_CheckedChanged(object sender, EventArgs e) //(De-)Aktivieren der Helligkeitstasten
         {
             Bar1.Enabled = check1.Checked ? false : true;
         }
@@ -317,9 +317,9 @@ namespace LightControl
             Bar6.Enabled = check6.Checked ? false : true;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Copyright: Timon Schulz und Dennis Kobert Gymnasium Josephinum");
+            MessageBox.Show("Copyright: Timon Scholz und Dennis Kobert; Gymnasium Josephinum");
         }
     }
 }

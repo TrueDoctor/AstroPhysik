@@ -59,7 +59,7 @@
             this.check3 = new System.Windows.Forms.CheckBox();
             this.Standard = new System.Windows.Forms.Button();
             this.Reset = new System.Windows.Forms.Button();
-            this.copyright = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -361,15 +361,16 @@
             this.Reset.UseVisualStyleBackColor = true;
             this.Reset.Click += new System.EventHandler(this.button2_Click);
             // 
-            // copyright
+            // linkLabel1
             // 
-            this.copyright.Location = new System.Drawing.Point(384, 9);
-            this.copyright.Name = "copyright";
-            this.copyright.Size = new System.Drawing.Size(40, 24);
-            this.copyright.TabIndex = 23;
-            this.copyright.Text = "Über";
-            this.copyright.UseVisualStyleBackColor = true;
-            this.copyright.Click += new System.EventHandler(this.button1_Click_1);
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(394, 9);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(30, 13);
+            this.linkLabel1.TabIndex = 23;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Über";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Form1
             // 
@@ -377,7 +378,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(436, 153);
-            this.Controls.Add(this.copyright);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.Reset);
             this.Controls.Add(this.Standard);
             this.Controls.Add(this.Button);
@@ -445,7 +446,7 @@
         private System.Windows.Forms.CheckBox check3;
         private System.Windows.Forms.Button Standard;
         private System.Windows.Forms.Button Reset;
-        private System.Windows.Forms.Button copyright;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
