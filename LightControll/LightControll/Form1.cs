@@ -319,7 +319,9 @@ namespace LightControl
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Copyright: Timon Scholz und Dennis Kobert; Gymnasium Josephinum");
+            Form AboutPage = new AboutPage();
+            AboutPage.Show();
+            //MessageBox.Show("Copyright: Timon Scholz und Dennis Kobert; Gymnasium Josephinum \n \n Verwendete Ressourcen für die HTML-Ausgabe: \n Bootstrap: http://getbootstrap.com/ \n");
         }
     }
 }
