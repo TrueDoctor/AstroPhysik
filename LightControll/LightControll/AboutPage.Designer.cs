@@ -33,14 +33,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -82,85 +74,8 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(632, 244);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Benutzt wurden folgende Ressourcen für die Erstellung des HTML-Dokuments:\r\n\r\nBoot" +
-    "strap, ein HTML, CSS und JS Framework unter MIT und CC BY 3.0 Lizenz:\r\n\r\n\r\n\r\n";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(34, 365);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(178, 20);
-            this.linkLabel2.TabIndex = 6;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "http://getbootstrap.com/";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicked);
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(34, 385);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(404, 20);
-            this.linkLabel3.TabIndex = 7;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "https://github.com/twbs/bootstrap/blob/master/LICENSE";
-            // 
-            // linkLabel4
-            // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(34, 405);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(319, 20);
-            this.linkLabel4.TabIndex = 8;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "https://creativecommons.org/licenses/by/3.0/";
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(23, 425);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(627, 23);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "jQuery, ein JavaScript Library unter der jQuery Lizenz:\r\n";
-            // 
-            // linkLabel5
-            // 
-            this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(34, 448);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(129, 20);
-            this.linkLabel5.TabIndex = 10;
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "http://jquery.com/\r\n";
-            // 
-            // linkLabel6
-            // 
-            this.linkLabel6.AutoSize = true;
-            this.linkLabel6.Location = new System.Drawing.Point(34, 468);
-            this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(262, 20);
-            this.linkLabel6.TabIndex = 11;
-            this.linkLabel6.TabStop = true;
-            this.linkLabel6.Text = "https://js.foundation/pdf/ip-policy.pdf";
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(23, 488);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(624, 23);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "amCharts, ein JavaScript Library zum Erstellen von Diagrammen:";
-            // 
-            // linkLabel7
-            // 
-            this.linkLabel7.AutoSize = true;
-            this.linkLabel7.Location = new System.Drawing.Point(34, 511);
-            this.linkLabel7.Name = "linkLabel7";
-            this.linkLabel7.Size = new System.Drawing.Size(198, 20);
-            this.linkLabel7.TabIndex = 13;
-            this.linkLabel7.TabStop = true;
-            this.linkLabel7.Text = "https://www.amcharts.com/";
+            this.label2.Text = "Benutzt wurden folgende Ressourcen für die Erstellung des HTML-Dokuments:\r\n\r\n-\r\n\r" +
+    "\n\r\n";
             // 
             // AboutPage
             // 
@@ -170,14 +85,6 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.CancelButton = this.button1;
             this.ClientSize = new System.Drawing.Size(827, 556);
-            this.Controls.Add(this.linkLabel7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.linkLabel6);
-            this.Controls.Add(this.linkLabel5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.linkLabel4);
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button1);
@@ -204,13 +111,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.LinkLabel linkLabel4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel linkLabel5;
-        private System.Windows.Forms.LinkLabel linkLabel6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel linkLabel7;
     }
 }
