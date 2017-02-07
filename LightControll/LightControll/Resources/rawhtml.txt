@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Auswertung der Helligkeiten</title>
+    <style>
+        .data {
+            padding: 20px;
+            margin: 20px;
+            border-style: solid;
+            border-radius: 12px;
+            border-width: 2px;
+            font-family: arial;
+            align-items: center;
+        }
+
+        .dataTable{
+            border-style: solid;
+            border-radius: 5px;
+            border-width: 2px;
+            border-color: #444444;
+            margin: 0 auto;
+        }
+
+        .colHeader {
+            font-size: 3.5em;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #888888;
+        }
+
+        .cell {
+            font-size: 3.25em;
+            text-align: right;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #aaaaaa;
+        }
+
+        #error {
+            text-align: justify;
+            font-size: 3em;
+        }
+
+        .canvas {
+            margin: 0 auto;
+            border-style: solid;
+            border-radius: 3px;
+            display: block;
+        }
+    </style>
+
+    <script>
+        //Copyright Timon Scholz 2017
+        var data = [@1,@2,@3,@4,@5,@6];
+        function setup(){
+            data = reverse(sort(data))
+
+            createCanvas(800,800).parent("graph").class("canvas");
+            select("#error").remove();
+
+            background(200);
+            textSize(30);
+            text("L",5,height/2-10);
+            text("E",5,height/2+20);
+            text("D",5,height/2+50);
+
+            text("Helligkeit",width/2-60,30);
+
+            strokeWeight(3);
+            line(66,66,66,height-30);
+            line(66,height-30,55,height-50);
+            line(66,height-30,77,height-50);
+
+            line(66,66,width-30,66);
+            line(width-30,66,width-50,55);
+            line(width-30,66,width-50,77);
+
+            for (var i = 1; i < 7; i++){
+                text(i, 33, 100*i+70);
+            }
+
+            for (var i=0; i<=255;i+=25.5){
+                noStroke()
+                text(floor(i), 55+i*2.5, 57);
+                stroke(150);
+                strokeWeight(3);
+                if (i!=0) line(65+i*2.55,69,65+i*2.55,height-30);
+            }
+            points = [];
+
+            for (var i = 0; i < data.length; i++){
+                data[i];
+                topP = 100*(i+1)+60;
+                leftP = map(data[i],0,255,65,715);
+                points.push(new p5.Vector(leftP,topP));
+                stroke(150);
+                strokeWeight(3);
+                line(69,topP,width-30,topP)
+
+                stroke(0,0,255);
+                strokeWeight(10);
+                point(leftP,topP);
+            }
+
+            strokeWeight(3);
+            stroke(0);
+            noFill();
+            curve(points[0].x,points[0].y,points[0].x,points[0].y,points[1].x,points[1].y,points[2].x,points[2].y);
+            curve(points[0].x,points[0].y,points[1].x,points[1].y,points[2].x,points[2].y,points[3].x,points[3].y);
+            curve(points[1].x,points[1].y,points[2].x,points[2].y,points[3].x,points[3].y,points[4].x,points[4].y);
+            curve(points[2].x,points[2].y,points[3].x,points[3].y,points[4].x,points[4].y,points[5].x,points[5].y);
+            curve(points[3].x,points[3].y,points[4].x,points[4].y,points[5].x,points[5].y,points[5].x,points[5].y);
+        }
+    </script>
+
+    <script src="@0\p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+    <script src="@0\p5.dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/addons/p5.dom.js"></script>
+
+
+  </head>
+  <body>
+    <div id="dataTable" class="data">
+      <table class="dataTable">
+        <tr>
+          <th class="colHeader">LED</th>
+          <td class="cell">6</td>
+          <td class="cell">5</td>
+          <td class="cell">4</td>
+          <td class="cell">3</td>
+          <td class="cell">2</td>
+          <td class="cell">1</td>
+        </tr>
+        <tr>
+          <th class="colHeader">Helligkeit</th>
+          <td class="cell">@1</td>
+          <td class="cell">@2</td>
+          <td class="cell">@3</td>
+          <td class="cell">@4</td>
+          <td class="cell">@5</td>
+          <td class="cell">@6</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="graph" class="data">
+        <div id="error">
+            Lade Anzeige-Skripte... <br>
+            Falls diese Nachricht nicht nach wenigen Sekunden verschwindet,
+            konnten die Skripte nicht gefunden werden. <br>
+            Dies kann vor allem dann passieren, wenn weder eine Verbindung zum
+            Internet hergestellt werden kann, noch die lokalen Dateien gefunden
+            werden konnten.
+        </div>
+    </div>
+
+
+   </body>
+</html>

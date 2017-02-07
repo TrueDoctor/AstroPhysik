@@ -13,7 +13,7 @@ namespace LightControl
         public static string[] line(byte[] brightness)
         {
             string dir = Directory.GetCurrentDirectory(); //Pfad der Exe in String "dir" zwischenspeichern
-            string codeRaw = System.IO.File.ReadAllText(Path.Combine(dir, "raw.html")); //Rodatei wird in string gelesen
+            string codeRaw = LightControl.Properties.Resources.rawhtml; //Rodatei wird in string gelesen
 
             byte[] brightness_bw = brightness; 
             Array.Reverse(brightness_bw); //Erstellt eine umgedrehte Variante des Brightness-Array
@@ -37,6 +37,7 @@ namespace LightControl
                         case '5': codeRawArray[i] = codeRawArray[i].Replace("@5", brightnessOrdered[4].ToString()); break;
                         case '6': codeRawArray[i] = codeRawArray[i].Replace("@6", brightnessOrdered[5].ToString()); break;
                     }
+                    i--;
                 }
             }
             return codeRawArray;
