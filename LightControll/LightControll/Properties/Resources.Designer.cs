@@ -22,7 +22,7 @@ namespace LightControl.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace LightControl.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LightControl.Properties.Resources", typeof(Resources).Assembly);
@@ -51,12 +51,41 @@ namespace LightControl.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///  &lt;head&gt;
+        ///    &lt;meta charset=&quot;UTF-8&quot;&gt;
+        ///    &lt;title&gt;Auswertung der Helligkeiten&lt;/title&gt;
+        ///    &lt;style&gt;
+        ///        .data {
+        ///            padding: 20px;
+        ///            margin: 20px;
+        ///            border-style: solid;
+        ///            border-radius: 12px;
+        ///            border-width: 2px;
+        ///            font-family: arial;
+        ///            align-items: center;
+        ///        }
+        ///
+        ///        .dataTable{
+        ///            border-style: solid;
+        ///            border-radius: 5px;
+        ///            border-width: 2px;
+        ///            bord [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string rawhtml {
+            get {
+                return ResourceManager.GetString("rawhtml", resourceCulture);
             }
         }
     }
