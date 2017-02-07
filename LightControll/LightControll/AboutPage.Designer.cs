@@ -32,23 +32,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(18, 14);
+            this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(632, 276);
+            this.label1.Size = new System.Drawing.Size(629, 276);
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
             // 
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(657, 498);
+            this.button1.Location = new System.Drawing.Point(484, 380);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(158, 46);
             this.button1.TabIndex = 3;
@@ -67,15 +67,18 @@
             this.linkLabel1.Text = "http://www.apache.org/licenses/LICENSE-2.0";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicked);
             // 
-            // label2
+            // linkLabel2
             // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(19, 300);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(632, 244);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Benutzt wurden folgende Ressourcen für die Erstellung des HTML-Dokuments:\r\n\r\n-\r\n\r" +
-    "\n\r\n";
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(12, 301);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(445, 160);
+            this.linkLabel2.TabIndex = 5;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Benutzt wurden folgende Ressourcen für die Erstellung \r\ndes HTML-Dokuments:\r\n\r\np5" +
+    ".js, ein JavaScript Library ein Community-gestütztes Projekt \r\nmit Unterstützung" +
+    " der Processing Foundation.\r\n\r\n\r\n\r\n";
+            this.linkLabel2.UseMnemonic = false;
             // 
             // AboutPage
             // 
@@ -84,8 +87,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.CancelButton = this.button1;
-            this.ClientSize = new System.Drawing.Size(827, 556);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(659, 442);
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -100,6 +103,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Über";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.AboutPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,6 +114,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

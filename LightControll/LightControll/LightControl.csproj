@@ -286,7 +286,6 @@
     <Content Include="plugins\responsive\license.txt" />
     <Content Include="plugins\responsive\responsive.js" />
     <Content Include="plugins\responsive\responsive.min.js" />
-    <Content Include="raw.html" />
     <Content Include="serial.js" />
     <Content Include="Icon.ico" />
     <Content Include="IconBIG.ico" />
