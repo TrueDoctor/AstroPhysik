@@ -1,149 +1,116 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8"> <!-- setzt Zeichencodierung auf Unicode -->
-    <title>Auswertung der Helligkeiten</title> <!-- Titel des Browser Tabs -->   
-    
-    <!-- Versuch, externe Skripte und Designs aus .exe-Verzeichnis zu laden -->
-   
-    <script src="@0\jquery-3.1.0.min.js"></script>
-    
-    <script src="@0\amcharts.js"></script>
-    <script src="@0\serial.js"></script>
-    <script src="@0\plugins\export\export.min.js"></script>
-    <link rel="stylesheet" href="@0\plugins\export\export.css" type="text/css" media="all" />
-    <script src="@0\light.js"></script>
-    
-    <link rel="stylesheet" href="@0\css\bootstrap.min.css">
-    <link rel="stylesheet" href="@0\css\bootstrap-theme.min.css">
-    <script src="@0\js\bootstrap.min.js"></script>
-    
-    <!-- Versuch, die externen Skripte und Designs aus Internet zu beziehen (falls zum Beispiel
-         HTML-Datei auf anderem Rechner geöffnet wird) -->
-    
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Auswertung der Helligkeiten</title>
+    <link rel="stylesheet" href="style.css">
 
-    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
-    <!-- Designs werden angepasst -->
-    <style> 
-      body { background-color: #1C1C29}
-      table, td, th { border: 1px solid black; font-size: 133%; text-align: center}
-      table {margin:auto}
-      th{width: 200px}
-      td{width: 60px}
-      #chartdiv {
-	    width: 100%;
-      height: 500px;}
-      .jumbotron { margin:10px; border-radius:10px; background-color: #30303d; color: #E1EAFF }
-    </style>
-  
-    <!-- Script zum Erstellen eines Graphen mit den gegebenen Daten -->  
-    <script> 
-      var chart = AmCharts.makeChart("chartdiv", {
-        "titles": [{
-          "text": "Helligkeitsauswertung der LEDs",
-          "size": 20
-        }],
-        "type": "serial",
-        "color": "#E1EAFF",
-        "theme": "dark",
-        "marginTop": 80,
-        "marginRight": 80,
-        "dataProvider": [{
-          "LED":6,
-          "Helligkeit":@6
-        },{
-          "LED":5,
-          "Helligkeit":@5
-        },{
-          "LED":4,
-          "Helligkeit":@4
-        },{
-          "LED":3,
-          "Helligkeit":@3
-        },{
-          "LED":2,
-          "Helligkeit":@2
-        },{
-          "LED":1,
-          "Helligkeit":@1
-        }],
-        "valueAxes": [{
-          "position": "left",
-          "title": "Helligkeit",
-        }],
-        "graphs": [{
-          "id":"g1",
-          "balloonText": "[[category]]<br><b><span style='font-size:14px;'>[[Helligkeit]]</span></b>",
-          "bullet": "round",
-          "bulletSize": 8,
-          "lineColor": "#5D8BFF",
-          "lineThickness": 2,
-          "valueField": "Helligkeit"
-        }],
-        "categoryField": "LED",
-        "categoryAxis": {
-          "minPeriod": "1",
-          "minorGridAlpha": 0.1,
-          "minorGridEnabled": true,
-          "title": "LED"
-        },
-        "export": {
-          "enabled": true,
-          "fileName": "Helligkeitsmessungen"
+    <script>
+        //Copyright Timon Scholz 2017
+        var data = [@1,@2,@3,@4,@5,@6];
+        function setup(){
+            data = reverse(sort(data))
+
+            createCanvas(800,800).parent("graph").class("canvas");
+            select("#error").remove();
+
+            background(200);
+            textSize(30);
+            text("L",5,height/2-10);
+            text("E",5,height/2+20);
+            text("D",5,height/2+50);
+
+            text("Helligkeit",width/2-60,30);
+
+            strokeWeight(3);
+            line(66,66,66,height-30);
+            line(66,height-30,55,height-50);
+            line(66,height-30,77,height-50);
+
+            line(66,66,width-30,66);
+            line(width-30,66,width-50,55);
+            line(width-30,66,width-50,77);
+
+            for (var i = 1; i < 7; i++){
+                text(i, 33, 100*i+70);
+            }
+
+            for (var i=0; i<=255;i+=25.5){
+                noStroke()
+                text(floor(i), 55+i*2.5, 57);
+                stroke(150);
+                strokeWeight(3);
+                if (i!=0) line(65+i*2.55,69,65+i*2.55,height-30);
+            }
+            points = [];
+
+            for (var i = 0; i < data.length; i++){
+                data[i];
+                topP = 100*(i+1)+60;
+                leftP = map(data[i],0,255,65,715);
+                points.push(new p5.Vector(leftP,topP));
+                stroke(150);
+                strokeWeight(3);
+                line(69,topP,width-30,topP)
+
+                stroke(0,0,255);
+                strokeWeight(10);
+                point(leftP,topP);
+            }
+
+            strokeWeight(3);
+            stroke(0);
+            noFill();
+            curve(points[0].x,points[0].y,points[0].x,points[0].y,points[1].x,points[1].y,points[2].x,points[2].y);
+            curve(points[0].x,points[0].y,points[1].x,points[1].y,points[2].x,points[2].y,points[3].x,points[3].y);
+            curve(points[1].x,points[1].y,points[2].x,points[2].y,points[3].x,points[3].y,points[4].x,points[4].y);
+            curve(points[2].x,points[2].y,points[3].x,points[3].y,points[4].x,points[4].y,points[5].x,points[5].y);
+            curve(points[3].x,points[3].y,points[4].x,points[4].y,points[5].x,points[5].y,points[5].x,points[5].y);
         }
-      });
-      chart.addListener("rendered", zoomChart);
-      if(chart.zoomChart){
-	    chart.zoomChart();
-      }
-
-      function zoomChart(){
-        chart.zoomToIndexes(0, chart.dataProvider.length);
-      }
     </script>
-    
+
+    <script src="@0\p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+    <script src="@0\p5.dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/addons/p5.dom.js"></script>
+
+
   </head>
-  
-  
   <body>
-    <div class="jumbotron">  <!-- Verwendung eines Jumbotrons, um abgegrenzten Bereich für Tabelle
-                                  bereitzustellen -->
-      <table>
+    <div id="dataTable" class="data">
+      <table class="dataTable">
         <tr>
-          <th>LED</th>
-          <td>6</td>
-          <td>5</td>
-          <td>4</td>
-          <td>3</td>
-          <td>2</td>
-          <td>1</td>
+          <th class="colHeader">LED</th>
+          <td class="cell">6</td>
+          <td class="cell">5</td>
+          <td class="cell">4</td>
+          <td class="cell">3</td>
+          <td class="cell">2</td>
+          <td class="cell">1</td>
         </tr>
         <tr>
-          <th>Helligkeit</th>
-          <td>@1</td>
-          <td>@2</td>
-          <td>@3</td>
-          <td>@4</td>
-          <td>@5</td>
-          <td>@6</td>
+          <th class="colHeader">Helligkeit</th>
+          <td class="cell">@1</td>
+          <td class="cell">@2</td>
+          <td class="cell">@3</td>
+          <td class="cell">@4</td>
+          <td class="cell">@5</td>
+          <td class="cell">@6</td>
         </tr>
       </table>
     </div>
-    
-    <div class="jumbotron">
-      <div id="chartdiv"></div> <!-- Graph wird an diese Stelle der Website gezeichnet -->
+
+    <div id="graph" class="data">
+        <div id="error">
+            Lade Anzeige-Skripte... <br>
+            Falls diese Nachricht nicht nach wenigen Sekunden verschwindet,
+            konnten die Skripte nicht gefunden werden. <br>
+            Dies kann vor allem dann passieren, wenn weder eine Verbindung zum
+            Internet hergestellt werden kann, noch die lokalen Dateien gefunden
+            werden konnten.
+        </div>
     </div>
-    
-    
+
+
    </body>
 </html>
