@@ -26,7 +26,7 @@
     <TargetCulture>de-DE</TargetCulture>
     <ProductName>LightControl</ProductName>
     <PublisherName>Timon Scholz und Dennis Kobert</PublisherName>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -113,59 +113,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="LightControll_TemporaryKey.pfx" />
-    <None Include="plugins\animate\LICENSE" />
-    <None Include="plugins\animate\README.md" />
-    <None Include="plugins\dataloader\examples\data\gantt.json" />
-    <None Include="plugins\dataloader\examples\data\gauge.json" />
-    <None Include="plugins\dataloader\examples\data\map.json" />
-    <None Include="plugins\dataloader\examples\data\map_areas.json" />
-    <None Include="plugins\dataloader\examples\data\MSFT.csv" />
-    <None Include="plugins\dataloader\examples\data\MSFT_events.csv" />
-    <None Include="plugins\dataloader\examples\data\pie.csv" />
-    <None Include="plugins\dataloader\examples\data\pie.json" />
-    <None Include="plugins\dataloader\examples\data\serial.csv" />
-    <None Include="plugins\dataloader\examples\data\serial.json" />
-    <None Include="plugins\dataloader\examples\data\serial2.json" />
-    <None Include="plugins\dataloader\examples\data\TXN.csv" />
-    <None Include="plugins\dataloader\readme.md" />
-    <None Include="plugins\export\libs\pdfmake\pdfmake.min.js.map" />
-    <None Include="plugins\export\libs\xlsx\LICENSE" />
-    <None Include="plugins\export\libs\xlsx\xlsx.min.map" />
-    <None Include="plugins\export\LICENSE" />
-    <None Include="plugins\export\README.md" />
-    <None Include="plugins\export\shapes\1.svg" />
-    <None Include="plugins\export\shapes\10.svg" />
-    <None Include="plugins\export\shapes\11.svg" />
-    <None Include="plugins\export\shapes\12.svg" />
-    <None Include="plugins\export\shapes\13.svg" />
-    <None Include="plugins\export\shapes\14.svg" />
-    <None Include="plugins\export\shapes\15.svg" />
-    <None Include="plugins\export\shapes\16.svg" />
-    <None Include="plugins\export\shapes\17.svg" />
-    <None Include="plugins\export\shapes\18.svg" />
-    <None Include="plugins\export\shapes\19.svg" />
-    <None Include="plugins\export\shapes\2.svg" />
-    <None Include="plugins\export\shapes\20.svg" />
-    <None Include="plugins\export\shapes\21.svg" />
-    <None Include="plugins\export\shapes\22.svg" />
-    <None Include="plugins\export\shapes\23.svg" />
-    <None Include="plugins\export\shapes\24.svg" />
-    <None Include="plugins\export\shapes\25.svg" />
-    <None Include="plugins\export\shapes\26.svg" />
-    <None Include="plugins\export\shapes\27.svg" />
-    <None Include="plugins\export\shapes\28.svg" />
-    <None Include="plugins\export\shapes\29.svg" />
-    <None Include="plugins\export\shapes\3.svg" />
-    <None Include="plugins\export\shapes\30.svg" />
-    <None Include="plugins\export\shapes\31.svg" />
-    <None Include="plugins\export\shapes\4.svg" />
-    <None Include="plugins\export\shapes\5.svg" />
-    <None Include="plugins\export\shapes\6.svg" />
-    <None Include="plugins\export\shapes\7.svg" />
-    <None Include="plugins\export\shapes\8.svg" />
-    <None Include="plugins\export\shapes\9.svg" />
-    <None Include="plugins\responsive\readme.md" />
-    <None Include="plugins\responsive\responsive.min.js.map" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -192,103 +139,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="themes\black.js" />
-    <Content Include="themes\chalk.js" />
-    <Content Include="themes\dark.js" />
-    <Content Include="themes\light.js" />
-    <Content Include="themes\patterns.js" />
-    <None Include="bin\Debug\amcharts.js" />
-    <None Include="bin\Debug\raw.html" />
-    <None Include="bin\Debug\serial.js" />
-    <Content Include="amcharts.js" />
-    <Content Include="plugins\animate\animate.js" />
-    <Content Include="plugins\animate\animate.min.js" />
-    <Content Include="plugins\dataloader\dataloader.js" />
-    <Content Include="plugins\dataloader\dataloader.min.js" />
-    <Content Include="plugins\dataloader\examples\gantt_json.html" />
-    <Content Include="plugins\dataloader\examples\gauge_json.html" />
-    <Content Include="plugins\dataloader\examples\map_json.html" />
-    <Content Include="plugins\dataloader\examples\map_json_external_function.html" />
-    <Content Include="plugins\dataloader\examples\pie_csv.html" />
-    <Content Include="plugins\dataloader\examples\pie_json.html" />
-    <Content Include="plugins\dataloader\examples\serial2_json.html" />
-    <Content Include="plugins\dataloader\examples\serial_csv.html" />
-    <Content Include="plugins\dataloader\examples\serial_json.html" />
-    <Content Include="plugins\dataloader\examples\serial_with_dynamic_graphs.html" />
-    <Content Include="plugins\dataloader\examples\stock_csv_data_and_events.html" />
-    <Content Include="plugins\dataloader\examples\stock_csv_progressbar.html" />
-    <Content Include="plugins\dataloader\lang\cs.js" />
-    <Content Include="plugins\dataloader\lang\en.js" />
-    <Content Include="plugins\dataloader\lang\fr.js" />
-    <Content Include="plugins\dataloader\lang\lt.js" />
-    <Content Include="plugins\dataloader\license.txt" />
-    <Content Include="plugins\export\examples\advanced.html" />
-    <Content Include="plugins\export\examples\export.config.advanced.js" />
-    <Content Include="plugins\export\examples\export.config.default.js" />
-    <Content Include="plugins\export\examples\funnel.html" />
-    <Content Include="plugins\export\examples\gantt.html" />
-    <Content Include="plugins\export\examples\gauge.html" />
-    <Content Include="plugins\export\examples\images\bicycle.png" />
-    <Content Include="plugins\export\examples\images\car.png" />
-    <Content Include="plugins\export\examples\images\motorcycle.png" />
-    <Content Include="plugins\export\examples\index.html" />
-    <Content Include="plugins\export\examples\map.html" />
-    <Content Include="plugins\export\examples\pie1.html" />
-    <Content Include="plugins\export\examples\pie2.html" />
-    <Content Include="plugins\export\examples\pie3.html" />
-    <Content Include="plugins\export\examples\pie4.html" />
-    <Content Include="plugins\export\examples\radar.html" />
-    <Content Include="plugins\export\examples\serial1.html" />
-    <Content Include="plugins\export\examples\serial2.html" />
-    <Content Include="plugins\export\examples\serial3.html" />
-    <Content Include="plugins\export\examples\stock.html" />
-    <Content Include="plugins\export\examples\xy.html" />
-    <Content Include="plugins\export\export.css" />
-    <Content Include="plugins\export\export.js" />
-    <Content Include="plugins\export\export.min.js" />
-    <Content Include="plugins\export\lang\cs.js" />
-    <Content Include="plugins\export\lang\de.js" />
-    <Content Include="plugins\export\lang\en.js" />
-    <Content Include="plugins\export\lang\fr.js" />
-    <Content Include="plugins\export\lang\ko.js" />
-    <Content Include="plugins\export\lang\lt.js" />
-    <Content Include="plugins\export\lang\pl.js" />
-    <Content Include="plugins\export\lang\pt.js" />
-    <Content Include="plugins\export\libs\blob.js\blob.js" />
-    <Content Include="plugins\export\libs\fabric.js\fabric.js" />
-    <Content Include="plugins\export\libs\fabric.js\fabric.min.js" />
-    <Content Include="plugins\export\libs\FileSaver.js\FileSaver.js" />
-    <Content Include="plugins\export\libs\FileSaver.js\FileSaver.min.js" />
-    <Content Include="plugins\export\libs\jszip\jszip.js" />
-    <Content Include="plugins\export\libs\jszip\jszip.min.js" />
-    <Content Include="plugins\export\libs\pdfmake\pdfmake.js" />
-    <Content Include="plugins\export\libs\pdfmake\pdfmake.min.js" />
-    <Content Include="plugins\export\libs\pdfmake\vfs_fonts.js" />
-    <Content Include="plugins\export\libs\xlsx\xlsx.js" />
-    <Content Include="plugins\export\libs\xlsx\xlsx.min.js" />
-    <Content Include="plugins\responsive\examples\funnel.html" />
-    <Content Include="plugins\responsive\examples\gantt.html" />
-    <Content Include="plugins\responsive\examples\gauge.html" />
-    <Content Include="plugins\responsive\examples\images\bicycle.png" />
-    <Content Include="plugins\responsive\examples\images\car.png" />
-    <Content Include="plugins\responsive\examples\images\motorcycle.png" />
-    <Content Include="plugins\responsive\examples\index.html" />
-    <Content Include="plugins\responsive\examples\map.html" />
-    <Content Include="plugins\responsive\examples\pie1.html" />
-    <Content Include="plugins\responsive\examples\pie2.html" />
-    <Content Include="plugins\responsive\examples\pie3.html" />
-    <Content Include="plugins\responsive\examples\radar.html" />
-    <Content Include="plugins\responsive\examples\serial1.html" />
-    <Content Include="plugins\responsive\examples\serial2.html" />
-    <Content Include="plugins\responsive\examples\serial3.html" />
-    <Content Include="plugins\responsive\examples\stock.html" />
-    <Content Include="plugins\responsive\examples\xy.html" />
-    <Content Include="plugins\responsive\license.txt" />
-    <Content Include="plugins\responsive\responsive.js" />
-    <Content Include="plugins\responsive\responsive.min.js" />
-    <Content Include="serial.js" />
     <Content Include="Icon.ico" />
     <Content Include="IconBIG.ico" />
+    <Content Include="raw.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
